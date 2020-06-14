@@ -11,6 +11,20 @@
   color: $color-titles;
 }
 
+.field {
+  margin-bottom: $field-inter-space;
+}
+
+.field .field__name{
+  margin: 0px 0px $field-intra-space 0px;
+}
+
+.field p.field__text{
+  line-height: $field-text-space;
+}
+
+
+
 hr {
   border-top: none;
   border-bottom: dotted $color-divider;

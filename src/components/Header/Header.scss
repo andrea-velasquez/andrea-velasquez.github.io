@@ -1,16 +1,5 @@
 @import '../../index';
 
-$field-space: 1em; // Space between fields
-$line-space: $field-space/2; // Space between fields inner lines
-
-#Header .field {
-  margin-bottom: $field-space;
-}
-
-#Header .field .field__name{
-  margin: 0px 0px $line-space 0px;
-}
-
 #Header .field .field__name .logo svg{
   @include resizeAspectRatio(1rem);
   margin-right: 0.5em;
