@@ -31,24 +31,24 @@ class Header extends Component {
 
   render() {
     return (
-      <section>
-        <div className="header-field">
-          <h2 className="field-name">Subject:</h2>
-          <h1>Andrea Velásquez Gushiken</h1>
+      <section id="Header">
+        <div className="field field__subject">
+          <h2 className="field__name">Subject:</h2>
+          <h1 className="field__text">Andrea Velásquez Gushiken</h1>
         </div>
 
-        <div className="header-field occupation">
+        <div className="field field__occupation">
           <h3>
-            <span className="field-name">Occupation: </span>
-            Computer Science Student
+            <span className="field__name">Occupation: </span>
+            <span className="field__text">Computer Science Student</span>
           </h3>
         </div>
 
-        <div className="header-field accounts">
+        <div className="field field__accounts">
           { this.state.accounts.map((account, index) => (
-            <div key={ index }>
-              <span className="field-name"><ReactSVG src={ account.logo } className="logo" wrapper="span"/>{ account.site }: </span>
-              <span><a href={account.link} target='_blank'>{ account.username }</a></span>
+            <div className="field__account" key={ index }>
+              <span className="field__name"><ReactSVG src={ account.logo } className="logo" wrapper="span"/>{ account.site }: </span>
+              <span className="field__text"><a href={account.link} target='_blank'>{ account.username }</a></span>
             </div>
           )) }
         </div>

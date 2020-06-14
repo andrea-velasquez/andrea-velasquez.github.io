@@ -7,7 +7,7 @@
   padding: 3em;
 }
 
-.field-name{
+.field .field__name{
   color: $color-titles;
 }
 
@@ -15,3 +15,7 @@ hr {
   border-top: none;
   border-bottom: dotted $color-divider;
 }
+
+h1 { font-size: 3rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }

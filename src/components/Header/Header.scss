@@ -3,19 +3,15 @@
 $field-space: 1em; // Space between fields
 $line-space: $field-space/2; // Space between fields inner lines
 
-.header-field {
+#Header .field {
   margin-bottom: $field-space;
 }
 
-h1, h2, .accounts div {
+#Header .field .field__name{
   margin: 0px 0px $line-space 0px;
 }
 
-h1 { font-size: 3rem; }
-h2 { font-size: 1.75rem; }
-h3 { font-size: 1.5rem; }
-
-.logo svg{
+#Header .field .field__name .logo svg{
   @include resizeAspectRatio(1rem);
   margin-right: 0.5em;
   path {
@@ -23,6 +19,6 @@ h3 { font-size: 1.5rem; }
   }
 }
 
-.accounts>div {
+#Header .field__account {
  @include twoColumnContent(7.5rem);
 }
