@@ -1,0 +1,52 @@
+@import 'reset';
+
+/* 
+ * Variables
+ */
+$font-path: './assets/fonts';
+
+$color-desk: #855532;
+$color-titles: #C3272E;
+$color-text: #000000;
+$color-logos: #C3272E;
+$color-paper: #FFFFFF;
+$color-polaroid: #EBEBEB;
+
+/* 
+ * Fonts
+ */
+@font-face{
+  font-family: veraType;
+  src: url('#{$font-path}/veraType.ttf');
+}
+@font-face{
+  font-family: jrhand;
+  src: url('#{$font-path}/jrhand.ttf');
+}
+
+/* 
+ * Mixins
+ */
+@mixin resizeAspectRatio($height) {
+  height: $height;
+  width: auto;
+}
+@mixin twoColumnContent($leftWidth, $rightWidth: calc(100%-#{$leftWidth})) {
+  display: inline-block;
+  width:100%;
+  &>:nth-child(2n-1) {
+    width: $leftWidth;
+    float: left;
+  }
+  &>:nth-child(2n) {
+    width: $rightWidth;
+    float: left;
+  }
+}
+
+/* 
+ * Some styles
+ */
+body{
+  background-color: $color-desk;
+}
