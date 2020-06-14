@@ -10,3 +10,8 @@
 .field-name{
   color: $color-titles;
 }
+
+hr {
+  border-top: none;
+  border-bottom: dotted $color-divider;
+}
