@@ -44,7 +44,7 @@ class Header extends Component {
           </h3>
         </div>
 
-        <div className="field field__accounts">
+        <div className="field field__group field__accounts field--twocolumn">
           { this.state.accounts.map((account, index) => (
             <div className="field__account" key={ index }>
               <span className="field__name"><ReactSVG src={ account.logo } className="logo" wrapper="span"/>{ account.site }: </span>

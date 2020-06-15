@@ -7,27 +7,33 @@
   padding: 3em;
 }
 
-.field .field__name{
+.field .field__name, .section__title{
   color: $color-titles;
 }
 
 .field {
   margin-bottom: $field-inter-space;
 }
-
-.field .field__name{
+ 
+// Note: Fields in a field group actually have a double spacing between them: the inter-space
+// (between each field) and the intra-space (between fields name). However, the divs
+// wrapping this fields usually ignore the size of its contents (and the intra-space),
+// leaving only the inter-space and avoid the double space. This doesn't happen when the
+// field group is aligned in two columns (wrapper div display is inline-block and fits its
+// content) and to avoid the double space the intra-space shouldn't be applied.
+// Aaand.. that's why there's a ':not(.field--twocolumn)'
+.field .field__name, .field__group:not(.field--twocolumn) div, .section__title{
   margin: 0px 0px $field-intra-space 0px;
 }
 
-.field p.field__text{
+p.field__text {
   line-height: $field-text-space;
 }
-
-
 
 hr {
   border-top: none;
   border-bottom: dotted $color-divider;
+  margin: $field-inter-space 0px;
 }
 
 h1 { font-size: 3rem; }

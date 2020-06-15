@@ -3,6 +3,7 @@ import './App.scss';
 
 import Header from './Header/Header';
 import Description from './Description/Description';
+import Education from './Education/Education';
 
 const App = () =>{
   return (
@@ -10,6 +11,7 @@ const App = () =>{
       <Header/>
       <hr/>
       <Description/>
+      <Education/>
     </div>
   );
 }
