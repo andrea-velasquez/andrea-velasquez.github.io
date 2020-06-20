@@ -1,8 +1,9 @@
 @import '../../index';
 
 .polaroid-film__content {
+  position: relative;
   background-color: $color-polaroid;
-  padding: 0.5em 0.5em 2em 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   margin-top: 2em;
 
   .polaroid-film__tape-wrapper {
@@ -26,6 +27,5 @@
 }
 
 .polaroid-film {
-  position: relative;
   display: inline-block;
 }
