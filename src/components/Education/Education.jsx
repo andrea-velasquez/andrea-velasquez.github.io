@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import './Education.scss';
+import PolaroidFilm from '../PolaroidFilm/PolaroidFilm';
+import utecImg from '../../assets/images/utec.jpg';
 
 class Education extends Component {
   state = {
@@ -7,7 +10,7 @@ class Education extends Component {
         name: "University of Engineering and Technology (UTEC)",
         degree: "Computer Science Bachelor",
         location: "Lima, Perú",
-        year: "4th",
+        year: "4th"
       },
     ],
   };
@@ -36,6 +39,7 @@ class Education extends Component {
             );
           })}
         </div>
+        <PolaroidFilm src={utecImg} height="120rem" width="160rem"/>
       </section>
     );
   }
