@@ -1,7 +1,6 @@
 @import '../../index';
 
-.polaroid-film {
-  position: relative;
+.polaroid-film__content {
   background-color: $color-polaroid;
   padding: 0.5em 0.5em 2em 0.5em;
   margin-top: 2em;
@@ -24,4 +23,9 @@
     font-size: 1.2rem;
     text-align: center;
   }
+}
+
+.polaroid-film {
+  position: relative;
+  display: inline-block;
 }

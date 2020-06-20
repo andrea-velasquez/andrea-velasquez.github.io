@@ -23,6 +23,7 @@ class PolaroidFilm extends Component {
   render() {
     return (
       <div className="polaroid-film">
+      <div className="polaroid-film__content">
         <div className="polaroid-film__tape-wrapper">
           <TapeSvg />
         </div>
@@ -41,6 +42,7 @@ class PolaroidFilm extends Component {
             )}
           </p>
         )}
+      </div>
       </div>
     );
   }
