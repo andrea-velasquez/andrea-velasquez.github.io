@@ -1,0 +1,27 @@
+@import '../../index';
+
+.polaroid-film {
+  position: relative;
+  background-color: $color-polaroid;
+  padding: 0.5em 0.5em 2em 0.5em;
+  margin-top: 2em;
+
+  .polaroid-film__tape-wrapper {
+    position: absolute;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transform: translateY(-70%);
+  }
+
+  .polaroid-film__image {
+    object-fit: cover;
+    margin-bottom: 1em;
+  }
+
+  .polaroid-film__caption {
+    font-family: jrhand;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

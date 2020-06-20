@@ -8,7 +8,8 @@ $font-path: './assets/fonts';
 $color-desk: #855532;
 $color-titles: #C3272E;
 $color-text: #000000;
-$color-logos: #C3272E;
+$color-logos-main: #C3272E;
+$color-logos-secondary: #000000;
 $color-paper: #FFFFFF;
 $color-polaroid: #EBEBEB;
 $color-divider: #C3272E;
@@ -46,6 +47,16 @@ $field-text-spacing: 1em + $field-inter-spacing/3; // Spacing between lines in f
   &>:nth-child(2n) {
     width: $rightWidth;
     float: left;
+  }
+}
+
+@mixin scrollingWrapper {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  & > div {
+    display: inline-block;
+    margin-right: 1em;
   }
 }
 

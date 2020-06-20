@@ -1,0 +1,29 @@
+@import '../../index';
+
+.projects {
+  @include scrollingWrapper;
+}
+
+.project{
+    vertical-align:top;
+
+    .project__technologies {
+      &>:first-child {
+        margin-right: 0.5em;
+      }
+
+      .logo svg{
+        @include resizeAspectRatio(1rem);
+        margin-left: 0.1em;
+        path { fill: $color-logos-secondary; }
+      }
+    }
+
+    .project__collaborators {
+      font-size: 0.8rem;
+    }
+  }
+
+.polaroid-film {
+  margin-bottom: 1em;
+}
