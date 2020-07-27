@@ -92,7 +92,7 @@ class Skills extends Component {
       ]
     },
     databases: {
-      category: "Frameworks",
+      category: "Databases",
       data: [
         {
           name: "PostgreSQL",
