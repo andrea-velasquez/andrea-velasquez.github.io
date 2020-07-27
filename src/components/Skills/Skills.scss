@@ -1,0 +1,64 @@
+@import "../../index.scss";
+
+#Skills .section__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#Skills .field.field__group {
+  position: relative;
+  display: inline-block;
+  padding-right: 1em;
+  // margin-left: auto;
+  // margin-right: auto;
+
+  .field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .field__text {
+    margin-left: 1em;
+    display: inline-block;
+    white-space: nowrap;
+
+    .progress-bar {
+      display: inline;
+    }
+
+    .logo {
+      width: 4rem;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .logo svg {
+      @include resizeAspectRatio(1rem);
+    }
+
+    
+  }
+  
+}
+
+#Skills .field__others {
+  width: 100%;
+  display: inline-flex;
+
+  .field__text {
+    margin-left: 1em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
