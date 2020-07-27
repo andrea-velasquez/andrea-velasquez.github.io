@@ -6,6 +6,7 @@ import Description from './Description/Description';
 import Education from './Education/Education';
 import Projects from './Projects/Projects';
 import Skills from './Skills/Skills';
+import Work from './Work/Work';
 
 const App = () =>{
   return (
@@ -16,6 +17,7 @@ const App = () =>{
       <Education/>
       <Projects/>
       <Skills/>
+      <Work/>
     </div>
   );
 }
