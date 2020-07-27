@@ -35,7 +35,7 @@ class Education extends Component {
               return tags;
             }, []);
             return (
-              <div key={index} className="field field__group field__education">{tags}</div>
+              <div key={index} className="field field__group field__university">{tags}</div>
             );
           })}
         </div>
