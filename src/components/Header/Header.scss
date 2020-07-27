@@ -9,5 +9,6 @@
 }
 
 #Header .field__account {
+ display: inline-block;
  @include twoColumnContent(7.5rem);
 }

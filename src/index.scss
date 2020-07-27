@@ -40,7 +40,6 @@ $field-text-spacing: 1em + $field-inter-spacing/3; // Spacing between lines in f
   width: auto;
 }
 @mixin twoColumnContent($leftWidth, $rightWidth: calc(100%-#{$leftWidth})) {
-  display: inline-block;
   width:100%;
   &>:nth-child(2n-1) {
     width: $leftWidth;
