@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './FieldBlock.scss';
 
 class FieldBlock extends Component {
   render() {
