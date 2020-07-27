@@ -17,7 +17,7 @@ class PolaroidFilm extends Component {
   };
 
   addHref = (href, content) => {
-    return href ? <a href={href} target="_blank">{content}</a> : content;
+    return href ? <a href={href} target="_blank" rel="noopener noreferrer">{content}</a> : content;
   };
 
   render() {

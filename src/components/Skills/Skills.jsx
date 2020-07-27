@@ -135,12 +135,12 @@ class Skills extends Component {
         <h2 className="section__title">Skills</h2>
         <div className="section__content">
         {
-        mainSkills.map( (skillCategory, idx) =>
-          <div key={idx} className={`field field__group field__${skillCategory.category.toLowerCase()}`}>
+        mainSkills.map( (skillCategory, catIdx) =>
+          <div key={catIdx} className={`field field__group field__${skillCategory.category.toLowerCase()}`}>
             <h4 className="field__name">{skillCategory.category}</h4>
             <div className="field_text">
-              {skillCategory.data.map((skill) => (
-                <div class="field field__language">
+              {skillCategory.data.map((skill, skIdx) => (
+                <div key={skIdx} className="field field__language">
                   <span>{skill.name}</span>
                   <div className="field__text">
                     <ProgressBar level={skill.level} />

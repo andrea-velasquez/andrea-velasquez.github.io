@@ -48,7 +48,7 @@ class Header extends Component {
           { this.state.accounts.map((account, index) => (
             <div className="field__account" key={ index }>
               <span className="field__name"><ReactSVG src={ account.logo } className="logo" wrapper="span"/>{ account.site }: </span>
-              <span className="field__text"><a href={account.link} target='_blank'>{ account.username }</a></span>
+              <span className="field__text"><a href={account.link} target='_blank' rel="noopener noreferrer">{ account.username }</a></span>
             </div>
           )) }
         </div>

@@ -28,11 +28,11 @@ class ProgressBar extends Component {
     const progress = this.state.levels[this.props.level];
     const remaining = this.state.total - progress;
     return (
-      <div class="progress-bar">
-        <span class="progress-bar__filled">
+      <div className="progress-bar">
+        <span className="progress-bar__filled">
           {this.state.character.repeat(progress)}
         </span>
-        <span class="progress-bar__empty">
+        <span className="progress-bar__empty">
           {this.state.character.repeat(remaining)}
         </span>
       </div>

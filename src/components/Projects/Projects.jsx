@@ -32,7 +32,7 @@ class Projects extends Component {
         technologies: [
           "springboot",
           "postgresql",
-          "vue",
+          "vuejs",
           "nuxtjs",
           "flask",
           "nativescript",
