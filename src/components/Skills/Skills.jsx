@@ -17,84 +17,93 @@ let reqToObject = (req) => {
 class Skills extends Component {
   // basic, intermediate, intermediate-advance, advance
   state = {
-    languages: [
-      {
-        name: "HTML/CSS",
-        level: "advance",
-      },
-      {
-        name: "Python",
-        level: "advance",
-      },
-      {
-        name: "Node.js",
-        level: "intermediate-advance",
-      },
-      {
-        name: "SQL",
-        level: "intermediate-advance",
-      },
-      {
-        name: "C++",
-        level: "intermediate-advance",
-      },
-      {
-        name: "C",
-        level: "intermediate",
-      },
-      {
-        name: "Java",
-        level: "basic",
-      },
-      {
-        name: "Wolfram",
-        level: "intermediate",
-      },
-      {
-        name: "Go",
-        level: "basic",
-      },
-      {
-        name: "R",
-        level: "basic",
-      },
-    ],
-    frameworks: [
-      {
-        name: "Angular",
-        level: "intermediate-advance",
-      },
-      {
-        name: "React",
-        level: "intermediate-advance",
-      },
-      {
-        name: "Flask",
-        level: "advance",
-      },
-      {
-        name: "Django",
-        level: "advance",
-      },
-      {
-        name: "Springboot",
-        level: "basic",
-      },
-      {
-        name: "Vue.js",
-        level: "basic",
-      },
-    ],
-    databases: [
-      {
-        name: "PostgreSQL",
-        level: "intermediate-advance",
-      },
-      {
-        name: "MongoDB",
-        level: "basic",
-      },
-    ],
+    languages: {
+      category: "Languages",
+      data: [
+        {
+          name: "HTML/CSS",
+          level: "advance",
+        },
+        {
+          name: "Python",
+          level: "advance",
+        },
+        {
+          name: "Node.js",
+          level: "intermediate-advance",
+        },
+        {
+          name: "SQL",
+          level: "intermediate-advance",
+        },
+        {
+          name: "C++",
+          level: "intermediate-advance",
+        },
+        {
+          name: "C",
+          level: "intermediate",
+        },
+        {
+          name: "Java",
+          level: "basic",
+        },
+        {
+          name: "Wolfram",
+          level: "intermediate",
+        },
+        {
+          name: "Go",
+          level: "basic",
+        },
+        {
+          name: "R",
+          level: "basic",
+        }
+      ]
+    },
+    frameworks: {
+      category: "Frameworks",
+      data: [
+        {
+          name: "Angular",
+          level: "intermediate-advance",
+        },
+        {
+          name: "React",
+          level: "intermediate-advance",
+        },
+        {
+          name: "Flask",
+          level: "advance",
+        },
+        {
+          name: "Django",
+          level: "advance",
+        },
+        {
+          name: "Springboot",
+          level: "basic",
+        },
+        {
+          name: "Vue.js",
+          level: "basic",
+        }
+      ]
+    },
+    databases: {
+      category: "Frameworks",
+      data: [
+        {
+          name: "PostgreSQL",
+          level: "intermediate-advance",
+        },
+        {
+          name: "MongoDB",
+          level: "basic",
+        }
+      ]
+    },
     others: [
       "Git",
       "Docker",
@@ -119,39 +128,24 @@ class Skills extends Component {
   }
 
   render() {
+    let {languages, frameworks, databases} = this.state;
+    let mainSkills = [languages, frameworks, databases];
     return (
       <section id="Skills">
         <h2 className="section__title">Skills</h2>
         <div className="section__content">
-          <div className="field field__group field__languages">
-            <h4 className="field__name">Languages</h4>
+        {
+        mainSkills.map( (skillCategory, idx) =>
+          <div key={idx} className={`field field__group field__${skillCategory.category.toLowerCase()}`}>
+            <h4 className="field__name">{skillCategory.category}</h4>
             <div className="field_text">
-              {this.state.languages.map((language) => (
+              {skillCategory.data.map((skill) => (
                 <div class="field field__language">
-                  <span>{language.name}</span>
+                  <span>{skill.name}</span>
                   <div className="field__text">
-                    <ProgressBar level={language.level} />
+                    <ProgressBar level={skill.level} />
                     <ReactSVG
-                      src={this.logos[this.encode(language.name)]}
-                      className="logo"
-                      wrapper="span"
-                    />
-                  </div>
-
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="field field__group field__frameworks">
-            <h4 className="field__name">Frameworks</h4>
-            <div className="field_text">
-              {this.state.frameworks.map((framework) => (
-                <div class="field field__framework">
-                  <span>{framework.name}</span>
-                  <div className="field__text">
-                    <ProgressBar level={framework.level} />
-                    <ReactSVG
-                      src={this.logos[this.encode(framework.name)]}
+                      src={this.logos[this.encode(skill.name)]}
                       className="logo"
                       wrapper="span"
                     />
@@ -160,24 +154,8 @@ class Skills extends Component {
               ))}
             </div>
           </div>
-          <div className="field field__group field__databases">
-            <h4 className="field__name">Databases</h4>
-            <div className="field_text">
-              {this.state.databases.map((database) => (
-                <div class="field field__database">
-                  <span>{database.name}</span>
-                  <div className="field__text">
-                    <ProgressBar level={database.level} />
-                    <ReactSVG
-                      src={this.logos[this.encode(database.name)]}
-                      className="logo"
-                      wrapper="span"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        )
+        }
           <div className="field field__others">
             <h4 className="field__name">Others:</h4>
             <div className="field__text">
