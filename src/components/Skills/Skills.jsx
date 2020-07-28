@@ -158,11 +158,9 @@ class Skills extends Component {
         }
           <div className="field field__others">
             <h4 className="field__name">Others:</h4>
-            <div className="field__text">
-              {this.state.others.map((other, idx) => (
-                  <span key={idx}>{other} {idx!==this.state.others.length-1 && "-"} </span>
-              ))}
-            </div>
+            <p className="field__text">
+              {this.state.others.join(" - ")}
+            </p>
           </div>
         </div>
       </section>
