@@ -8,6 +8,7 @@ import Projects from './Projects/Projects';
 import Skills from './Skills/Skills';
 import Work from './Work/Work';
 import Interests from './Interests/Interests';
+import { ReactComponent as Logo } from '../assets/images/logo.svg';
 
 const App = () =>{
   return (
@@ -20,6 +21,10 @@ const App = () =>{
       <Skills/>
       <Work/>
       <Interests/>
+      <div className="thanks">
+        <h2>Thanks for reading!</h2>
+        <Logo/>
+      </div>
     </div>
   );
 }
