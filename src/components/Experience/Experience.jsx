@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import FieldBlock from "../FieldBlock/FieldBlock";
 
-class Work extends Component {
+class Experience extends Component {
   state = {
-    workPlaces: [
+    experiences: [
       [
         {
           name: "Work",
@@ -66,13 +66,13 @@ class Work extends Component {
 
   render() {
     return (
-      <section id="Work">
+      <section id="Experience">
         <h2 className="section__title">Work Experience & Activities</h2>
         <div>
           <FieldBlock
-            fields={this.state.workPlaces}
-            singleFieldClass="workPlace"
-            groupFieldClass="workPlaces"
+            fields={this.state.experiences}
+            singleFieldClass="experience"
+            groupFieldClass="experiences"
           />
         </div>
       </section>
@@ -80,4 +80,4 @@ class Work extends Component {
   }
 }
 
-export default Work;
+export default Experience;
