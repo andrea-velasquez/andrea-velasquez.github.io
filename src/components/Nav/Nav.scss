@@ -1,0 +1,20 @@
+@import "../../index.scss";
+
+nav {
+  position: fixed;
+  display: inline-block;
+  background-color: rgba(0,0,0,0.2);
+  padding: 1em 1em 1em 2em;
+  text-align: right;
+  
+  max-width: 15%;
+  right: 0;
+
+  a {
+    display: block;
+    font-family: "veraType";
+    color: #fff;
+    font-size: $nav-links-size;
+    margin: 1em 0;
+  }
+}
