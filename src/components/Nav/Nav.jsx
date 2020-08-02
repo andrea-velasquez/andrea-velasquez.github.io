@@ -18,7 +18,7 @@ class Nav extends Component {
   }
   render() {
     return (
-      <nav>
+      <nav id="nav">
         <div className="nav__links">
         {
           this.state.sections.map( (section) =>

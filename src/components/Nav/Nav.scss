@@ -1,8 +1,10 @@
 @import "../../index.scss";
 
-nav {
+#nav {
+  z-index: 1;
   display: inline-sblock;
   position: fixed;
+  margin-top: 10%;
   right: 0;
   max-width: 15%;
   min-width: 180px;

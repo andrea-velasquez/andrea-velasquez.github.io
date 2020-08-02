@@ -1,9 +1,15 @@
 @import "../index";
+@import "./background";
+
+#app {
+  position: relative;
+  overflow: hidden;
+}
 
 .paper {
+  margin: 5% 15% 5% 5%;
   font-family: "veraType";
   background-color: $color-paper;
-  margin: 5% 15% 5% 5%;
   padding: 3em;
 }
 
