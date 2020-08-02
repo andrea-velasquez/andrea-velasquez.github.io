@@ -33,19 +33,30 @@ const langContent = {
 
 class App extends Component {
   state = {
-    language: "es",
-    theme: "light",
+    languages: ["es", "en"],
+    curLanguage: "es",
+    theme: "light"
   };
 
+  onChangeLang = (lang) => {
+    this.setState( {curLanguage: this.getOtherLang()} );
+  }
+
+  getOtherLang = () => {
+    return this.state.curLanguage === "es"? "en" : "es";
+  }
+
   render() {
-    let { language, theme } = this.state;
-    let curContent = langContent[language];
+    let { curLanguage, theme } = this.state;
+    let curContent = langContent[curLanguage];
     return (
       <div id="app">
         <Background />
         <Nav
           constants={curContent.constants.nav}
           content={curContent.content.nav}
+          onChangeLang={ this.onChangeLang }
+          otherLang={ this.getOtherLang() }
         />
         <div className="paper">
           <Header constants={curContent.constants.header} />

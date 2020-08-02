@@ -4,13 +4,18 @@ import { ReactComponent as SunIcon } from '../../assets/images/icons/sun.svg';
 import { ReactComponent as MoonIcon } from '../../assets/images/icons/moon.svg';
 import { ReactComponent as PdfIcon } from '../../assets/images/icons/pdf.svg';
 
+const capitalize = (w) => {
+  w = w[0].toUpperCase() + w.slice(1);
+  return w;
+}
+
 class Nav extends Component {
   state = {
     currentTheme: "light"
   }
-  
+
   render() {
-    const { constants, content } = this.props;
+    const { constants, content, onChangeLang, otherLang } = this.props;
     return (
       <nav id="nav">
         <div className="nav__links">
@@ -22,7 +27,7 @@ class Nav extends Component {
         </div>
           <div className="nav__options">
           <div className="nav__option" id="language">
-            <button>Es</button>
+            <button onClick={onChangeLang}>{capitalize(otherLang)}</button>
             <span>{constants.LANG}</span>
           </div>
           <div className="nav__option" id="theme">
