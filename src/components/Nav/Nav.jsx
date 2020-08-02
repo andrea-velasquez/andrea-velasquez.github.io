@@ -6,22 +6,16 @@ import { ReactComponent as PdfIcon } from '../../assets/images/icons/pdf.svg';
 
 class Nav extends Component {
   state = {
-    sections: [
-      "Description",
-      "Education",
-      "Projects",
-      "Skills",
-      "Experience",
-      "Interests"
-    ],
     currentTheme: "light"
   }
+  
   render() {
+    const { constants, content } = this.props;
     return (
       <nav id="nav">
         <div className="nav__links">
         {
-          this.state.sections.map( (section) =>
+          content.sections.map( (section) =>
             <a href={`#${section}`}>{section}</a>
           )
         }
@@ -29,7 +23,7 @@ class Nav extends Component {
           <div className="nav__options">
           <div className="nav__option" id="language">
             <button>Es</button>
-            <span>Lang</span>
+            <span>{constants.LANG}</span>
           </div>
           <div className="nav__option" id="theme">
             <button>
@@ -38,12 +32,12 @@ class Nav extends Component {
               : <SunIcon/>
             }
             </button>
-            <span>Theme</span>
+            <span>{constants.THEME}</span>
           </div>
           <br/>
           <div className="nav__option" id="pdf">
             <button><PdfIcon/></button>
-            <span>PDF here!</span>
+            <span>{constants.PDF_HERE}</span>
           </div>
         </div>
       </nav>

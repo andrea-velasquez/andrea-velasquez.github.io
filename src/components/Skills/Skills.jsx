@@ -15,109 +15,6 @@ let reqToObject = (req) => {
 };
 
 class Skills extends Component {
-  // basic, intermediate, intermediate-advance, advance
-  state = {
-    languages: {
-      category: "Languages",
-      data: [
-        {
-          name: "HTML/CSS",
-          level: "advance",
-        },
-        {
-          name: "Python",
-          level: "advance",
-        },
-        {
-          name: "Node.js",
-          level: "intermediate-advance",
-        },
-        {
-          name: "SQL",
-          level: "intermediate-advance",
-        },
-        {
-          name: "C++",
-          level: "intermediate-advance",
-        },
-        {
-          name: "C",
-          level: "intermediate",
-        },
-        {
-          name: "Java",
-          level: "basic",
-        },
-        {
-          name: "Wolfram",
-          level: "intermediate",
-        },
-        {
-          name: "Go",
-          level: "basic",
-        },
-        {
-          name: "R",
-          level: "basic",
-        }
-      ]
-    },
-    frameworks: {
-      category: "Frameworks",
-      data: [
-        {
-          name: "Angular",
-          level: "intermediate-advance",
-        },
-        {
-          name: "React",
-          level: "intermediate-advance",
-        },
-        {
-          name: "Flask",
-          level: "advance",
-        },
-        {
-          name: "Django",
-          level: "advance",
-        },
-        {
-          name: "Springboot",
-          level: "basic",
-        },
-        {
-          name: "Vue.js",
-          level: "basic",
-        }
-      ]
-    },
-    databases: {
-      category: "Databases",
-      data: [
-        {
-          name: "PostgreSQL",
-          level: "intermediate-advance",
-        },
-        {
-          name: "MongoDB",
-          level: "basic",
-        }
-      ]
-    },
-    others: [
-      "Git",
-      "Docker",
-      "AWS",
-      "UNIX",
-      "LaTeX",
-      "Markdown",
-      "Sass",
-      "Raspberry Pi",
-      "Game Maker",
-      "Virtual machines",
-    ],
-  };
-
   logos = reqToObject(reqLogosSvgs);
 
   encode = (n) => {
@@ -128,16 +25,17 @@ class Skills extends Component {
   }
 
   render() {
-    let {languages, frameworks, databases} = this.state;
+    let {languages, frameworks, databases, others} = this.props.content;
+    let {constants} = this.props;
     let mainSkills = [languages, frameworks, databases];
     return (
       <section id="Skills">
-        <h2 className="section__title">Skills</h2>
+        <h2 className="section__title">{constants.SKILLS}</h2>
         <div className="section__content">
         {
         mainSkills.map( (skillCategory, catIdx) =>
           <div key={catIdx} className={`field field__group field__${skillCategory.category.toLowerCase()}`}>
-            <h4 className="field__name">{skillCategory.category}</h4>
+            <h4 className="field__name">{constants[skillCategory.category]}</h4>
             <div className="field_text">
               {skillCategory.data.map((skill, skIdx) => (
                 <div key={skIdx} className="field field__language">
@@ -157,9 +55,9 @@ class Skills extends Component {
         )
         }
           <div className="field field__others">
-            <h4 className="field__name">Others:</h4>
+            <h4 className="field__name">{constants.OTHERS}:</h4>
             <p className="field__text">
-              {this.state.others.join(" - ")}
+              {others.join(" - ")}
             </p>
           </div>
         </div>

@@ -1,0 +1,264 @@
+{
+  "nav": {
+    "sections": [
+      "Description",
+      "Education",
+      "Projects",
+      "Skills",
+      "Experience",
+      "Interests"
+    ]
+  },
+
+  "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata",
+  
+  "education": {
+    "universities": [
+      [
+        {
+          "name": "Name",
+          "text": "University of Engineering and Technology (UTEC)"
+        },
+        {
+          "name": "Degree",
+          "text": "Computer Science Bachelor"
+        },
+        {
+          "name": "Location",
+          "text": "Lima, Perú"
+        },
+        {
+          "name": "Year",
+          "text": "4th"
+        }
+      ]
+    ]
+  },
+  
+  "projects": [
+    {
+      "name": "Personal Website",
+      "imageFilename": "personal-website", 
+      "year": "2020",
+      "link": "#",
+      "technologies": ["react", "sass"]
+    },
+    {
+      "name": "Yapay",
+      "imageFilename": "yapay",
+      "year": "2019",
+      "link": "https://github.com/utec-yapay/yape-bcp-project-yapay",
+      "technologies": [
+        "springboot",
+        "postgresql",
+        "vuejs",
+        "nuxtjs",
+        "flask",
+        "nativescript"
+      ],
+      "collaboratorsGithub": [
+        "alessiayi",
+        "arturocuya",
+        "camilaferno",
+        "lilvedaes",
+        "Guillermo598"
+      ]
+    },
+    {
+      "name": "Barranco Weather",
+      "imageFilename": "barranco-weather",
+      "year": "2018",
+      "link": "https://gitlab.com/barranco-weather",
+      "technologies": ["flask", "php", "raspberrypi"],
+      "collaboratorsGithub": ["arturocuya", "lilvedaes"]
+    },
+    {
+      "name": "The CUAC Path",
+      "imageFilename": "the-cuac-path",
+      "year": "2017",
+      "link": "https://github.com/andrea-velasquez/TheCuacPath/",
+      "technologies": ["gamemaker"],
+      "collaboratorsGithub": ["arturocuya", "lilvedaes"]
+    },
+    {
+      "name": "Esnaque",
+      "imageFilename": "esnaque",
+      "year": "2017",
+      "link": "https://github.com/andrea-velasquez/esnaque/",
+      "technologies": ["python"],
+      "collaboratorsGithub": ["lilvedaes"]
+    }
+  ],
+
+  "skills": {
+    "languages": {
+      "category": "LANGUAGES",
+      "data": [
+        {
+          "name": "HTML/CSS",
+          "level": "advance"
+        },
+        {
+          "name": "Python",
+          "level": "advance"
+        },
+        {
+          "name": "Node.js",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "SQL",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "C++",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "C",
+          "level": "intermediate"
+        },
+        {
+          "name": "Java",
+          "level": "basic"
+        },
+        {
+          "name": "Wolfram",
+          "level": "intermediate"
+        },
+        {
+          "name": "Go",
+          "level": "basic"
+        },
+        {
+          "name": "R",
+          "level": "basic"
+        }
+      ]
+    },
+    "frameworks": {
+      "category": "FRAMEWORKS",
+      "data": [
+        {
+          "name": "Angular",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "React",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "Flask",
+          "level": "advance"
+        },
+        {
+          "name": "Django",
+          "level": "advance"
+        },
+        {
+          "name": "Springboot",
+          "level": "basic"
+        },
+        {
+          "name": "Vue.js",
+          "level": "basic"
+        }
+      ]
+    },
+    "databases": {
+      "category": "DATABASES",
+      "data": [
+        {
+          "name": "PostgreSQL",
+          "level": "intermediate-advance"
+        },
+        {
+          "name": "MongoDB",
+          "level": "basic"
+        }
+      ]
+    },
+    "others": [
+      "Git",
+      "Docker",
+      "AWS",
+      "UNIX",
+      "LaTeX",
+      "Markdown",
+      "Sass",
+      "Raspberry Pi",
+      "Game Maker",
+      "Virtual machines"
+    ]
+  },
+
+  "experience": {
+    "experiences": [
+      [
+        {
+          "name": "Work",
+          "text": "UTEC Ventures",
+          "link": "http://utecventures.com/"
+        },
+        {
+          "name": "Job Title",
+          "text": "Frontend Web Developer"
+        },
+        {
+          "name": "Location",
+          "text": "Lima, Perú"
+        },
+        {
+          "name": "Period",
+          "text": "Jul 2019 - Sep 2019"
+        }
+      ],
+      [
+        {
+          "name": "Work",
+          "text": "AmigoCloud",
+          "link": "https://www.amigocloud.com/en/"
+        },
+        {
+          "name": "Job Title",
+          "text": "Full Stack Developer Intern"
+        },
+        {
+          "name": "Location",
+          "text": "Lima, Perú - San Francisco, US"
+        },
+        {
+          "name": "Period",
+          "text": "Jul 2018 - Nov 2018"
+        }
+      ],
+      [
+        {
+          "name": "Activity",
+          "text": "Creacode Coach",
+          "link": "https://www.creacode.com.pe/"
+        },
+        {
+          "name": "Description",
+          "text": "Teach computational thinking and code to children"
+        },
+        {
+          "name": "Location",
+          "text": "Lima, Perú"
+        },
+        {
+          "name": "Period",
+          "text": "2018 - present"
+        }
+      ]
+    ]
+  },
+
+  "interests": [
+    "Puzzles",
+    "Travel",
+    "Movies & Series",
+    "Snowboard",
+    "Music"
+  ]
+}

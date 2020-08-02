@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import Project from "./Project";
 import "./Projects.scss";
 
-const reqLogosSvgs = require.context("../../assets/images/brand-logos", false, /\.svg$/);
+const reqLogosSvgs = require.context(
+  "../../assets/images/brand-logos",
+  false,
+  /\.svg$/
+);
 const reqProjectsImgs = require.context("../../assets/images/projects", false);
 
 let reqToObject = (req) => {
@@ -69,29 +73,33 @@ class Projects extends Component {
     ],
   };
 
-  componentDidMount() {
-    let { projects } = this.state;
-    projects.forEach((project) => {
-      project.technologies = project.technologies.reduce( 
-        (logos, technology) => {
-          logos[technology] = svgLogos[technology];
-          return logos;
-        },
-        {}
-      );
-      project.image = projectsImgs[project.name.toLowerCase().split(" ").join("-")];
-    });
-    this.setState({ projects });
+  getLogos = (technologies) => {
+    let logos = technologies.reduce(
+      (logos, technology) => {
+        logos[technology] = svgLogos[technology];
+        return logos;
+      },
+      {}
+    );
+    return logos;
   }
+
   render() {
-    let { projects } = this.state;
+    let { content: projects, constants } = this.props;
     return (
       <section id="Projects">
-        <h2 className="section__title">Projects</h2>
+        <h2 className="section__title">{ constants.PROJECTS }</h2>
         <div className="projects">
-          {projects.map((project, index) => {
-            return <Project key={index} project={project} />;
-          })}
+          {projects.map((project, index) => (
+              <Project
+                key={index}
+                project={project}
+                techLogos={this.getLogos(project.technologies)}
+                image={projectsImgs[project.imageFilename]}
+                constants={constants}
+              />
+            )
+          )}
         </div>
       </section>
     );

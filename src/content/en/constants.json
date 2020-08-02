@@ -1,0 +1,47 @@
+{
+  "header": {
+    "SUBJECT": "Subject",
+    "OCCUPATION": "Occupation",
+    "CS_STUDENT": "Computer Science Student"
+  },
+  
+  "description": {
+    "DESCRIPTION": "Description"
+  },
+
+  "education": {
+    "EDUCATION": "Education"
+  },
+
+  "projects": {
+    "PROJECTS": "Projects",
+    "MADE_WITH": "Made with",
+    "IN_COLLABORATION": "In collaboration with"
+  },
+
+  "skills": {
+    "SKILLS": "Skills",
+    "LANGUAGES": "Languages",
+    "FRAMEWORKS": "Frameworks",
+    "DATABASES": "Databases",
+    "OTHERS": "Others"
+  },
+
+  "experience": {
+    "WORK_EXPERIENCE_ACTIVITIES": "Work Experience & Activities"
+  },
+
+  "interests": {
+    "INTERESTS": "Interests"
+  },
+
+  "thanks": {
+    "THANKS_READING": "Thanks for reading!"
+  },
+
+  "nav": {
+    "LANG": "Lang",
+    "THEME": "Theme",
+    "PDF_HERE": "Printable PDF"
+  }
+}

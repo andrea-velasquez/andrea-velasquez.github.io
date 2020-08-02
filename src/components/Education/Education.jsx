@@ -5,35 +5,13 @@ import PolaroidFilm from "../PolaroidFilm/PolaroidFilm";
 import utecImg from "../../assets/images/utec.jpg";
 
 class Education extends Component {
-  state = {
-    universities: [
-      [
-        {
-          name: "Name",
-          text: "University of Engineering and Technology (UTEC)",
-        },
-        {
-          name: "Degree",
-          text: "Computer Science Bachelor",
-        },
-        {
-          name: "Location",
-          text: "Lima, Perú",
-        },
-        {
-          name: "Year",
-          text: "4th",
-        },
-      ]
-    ],
-  };
-
   render() {
+    const { content, constants } = this.props;
     return (
       <section id="Education">
-        <h2 className="section__title">Education</h2>
+        <h2 className="section__title">{constants.EDUCATION}</h2>
         <FieldBlock
-          fields={this.state.universities}
+          fields={content.universities}
           groupFieldClass="education"
           singleFieldClass="university"
         />

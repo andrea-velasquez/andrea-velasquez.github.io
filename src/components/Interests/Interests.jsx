@@ -1,21 +1,12 @@
 import React, { Component }  from 'react';
 
 class Interests extends Component {
-  state = {
-    interests: [
-      "Puzzles",
-      "Travel",
-      "Movies & Series",
-      "Snowboard",
-      "Music"
-    ]
-  }
-
   render() {
+    const { content, constants } = this.props; 
     return (
       <section id="Interests">
-        <h2 className="section__title">Interests</h2>
-        <p>{this.state.interests.join(" - ")}</p>
+        <h2 className="section__title">{ constants.INTERESTS }</h2>
+        <p>{content.join(" - ")}</p>
       </section>
     );
   }

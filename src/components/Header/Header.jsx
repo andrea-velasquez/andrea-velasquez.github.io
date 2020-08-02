@@ -30,17 +30,18 @@ class Header extends Component {
   };
 
   render() {
+    const { constants } = this.props;
     return (
       <section id="Header">
         <div className="field field__subject">
-          <h2 className="field__name">Subject:</h2>
+          <h2 className="field__name">{ constants.SUBJECT }:</h2>
           <h1 className="field__text">Andrea Velásquez Gushiken</h1>
         </div>
 
         <div className="field field__occupation">
           <h3>
-            <span className="field__name">Occupation: </span>
-            <span className="field__text">Computer Science Student</span>
+            <span className="field__name">{ constants.OCCUPATION }: </span>
+            <span className="field__text">{ constants.CS_STUDENT }</span>
           </h3>
         </div>
 
