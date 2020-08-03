@@ -10,6 +10,7 @@ class Project extends Component {
     return (
       <div className="project">
         <PolaroidFilm
+          withTape={true}
           caption={`${project.name}\\n(${project.year})`}
           src={image}
           width={`${imgWidthRem}rem`}

@@ -10,6 +10,7 @@ import Experience from "./Experience/Experience";
 import Interests from "./Interests/Interests";
 import Nav from "./Nav/Nav";
 import Background from "./Background/Background";
+import MainPhoto from "./MainPhoto/MainPhoto";
 
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
 
@@ -59,6 +60,7 @@ class App extends Component {
           otherLang={ this.getOtherLang() }
         />
         <div className="paper">
+          <MainPhoto />
           <Header constants={curContent.constants.header} />
           <hr />
           <Description

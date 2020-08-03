@@ -23,10 +23,12 @@ class PolaroidFilm extends Component {
   render() {
     return (
       <div className="polaroid-film">
-      <div className="polaroid-film__content">
+      <div className="polaroid-film__content" style={this.props.withTape && {marginTop: "2em"}}>
+        { this.props.withTape && 
         <div className="polaroid-film__tape-wrapper">
           <TapeSvg />
         </div>
+        }
         <img
           className="polaroid-film__image"
           width={this.props.width}

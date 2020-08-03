@@ -1,5 +1,9 @@
 @import '../../index';
 
+#Header {
+  margin-right: 30%; 
+}
+
 #Header .field .field__name .logo svg{
   @include resizeAspectRatio(1rem);
   margin-right: 0.5em;
