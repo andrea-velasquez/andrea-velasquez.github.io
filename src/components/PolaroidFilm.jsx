@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ReactComponent as TapeSvg } from "../assets/tape.svg";
+import { ReactComponent as TapeSvg } from "../assets/images/icons/tape.svg";
 
 class PolaroidFilm extends Component {
   replaceEndLines = (text) => {
