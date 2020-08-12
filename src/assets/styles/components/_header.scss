@@ -1,8 +1,3 @@
-/* Dependencies:
-*    base/_mixins
-*    themes/_themes
-*/
-
 #Header {
   margin-right: 30%;
 }
@@ -12,7 +7,6 @@
   margin-right: 0.5em;
   path {
     @include theme-aware('fill', 'color-logos-main', $themes);
-    // fill: $color-logos-main;
   }
 }
 

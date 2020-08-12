@@ -14,7 +14,6 @@
         @include resizeAspectRatio(1rem);
         margin-left: 0.1em;
         path {
-          // fill: $color-logos-secondary;
           @include theme-aware('fill', 'color-logos-secondary', $themes);
         }
       }
