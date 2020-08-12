@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import "./App.scss";
 
-import Header from "./Header/Header";
-import Description from "./Description/Description";
-import Education from "./Education/Education";
-import Projects from "./Projects/Projects";
-import Skills from "./Skills/Skills";
-import Experience from "./Experience/Experience";
-import Interests from "./Interests/Interests";
-import Nav from "./Nav/Nav";
-import Background from "./Background/Background";
-import MainPhoto from "./MainPhoto/MainPhoto";
+import Header from "./Header";
+import Description from "./Description";
+import Education from "./Education";
+import Projects from "./Projects";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Interests from "./Interests";
+import Nav from "./Nav";
+import Background from "./Background";
+import MainPhoto from "./MainPhoto";
 
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
 
@@ -43,6 +42,13 @@ class App extends Component {
     this.setState( {curLanguage: this.getOtherLang()} );
   }
 
+  onChangeTheme = () => {
+    let isLight = this.state.theme === "light";
+    let newTheme = isLight? "dark" : "light";
+
+    this.setState( {theme: newTheme} );
+  }
+
   getOtherLang = () => {
     return this.state.curLanguage === "es"? "en" : "es";
   }
@@ -51,45 +57,49 @@ class App extends Component {
     let { curLanguage, theme } = this.state;
     let curContent = langContent[curLanguage];
     return (
-      <div id="app">
-        <Background />
-        <Nav
-          constants={curContent.constants.nav}
-          content={curContent.content.nav}
-          onChangeLang={ this.onChangeLang }
-          otherLang={ this.getOtherLang() }
-        />
-        <div className="paper">
-          <MainPhoto />
-          <Header constants={curContent.constants.header} />
-          <hr />
-          <Description
-            content={curContent.content.description}
-            constants={curContent.constants.description}
+      <div className={`theme-${theme}`}>
+        <div id="app">
+          <Background />
+          <Nav
+            constants={curContent.constants.nav}
+            content={curContent.content.nav}
+            onChangeLang={ this.onChangeLang }
+            onChangeTheme={ this.onChangeTheme }
+            otherLang={ this.getOtherLang() }
+            theme={ theme }
           />
-          <Education
-            content={curContent.content.education}
-            constants={curContent.constants.education}
-          />
-          <Projects
-            content={curContent.content.projects}
-            constants={curContent.constants.projects}
-          />
-          <Skills
-            content={curContent.content.skills}
-            constants={curContent.constants.skills}
-          />
-          <Experience
-            content={curContent.content.experience}
-            constants={curContent.constants.experience}
-          />
-          <Interests
-            content={curContent.content.interests}
-            constants={curContent.constants.interests}
-          />
-          <div className="thanks">
-            <h2>{curContent.constants.thanks.THANKS_READING}</h2>
-            <Logo />
+          <div className="paper">
+            <MainPhoto />
+            <Header constants={curContent.constants.header} />
+            <hr />
+            <Description
+              content={curContent.content.description}
+              constants={curContent.constants.description}
+            />
+            <Education
+              content={curContent.content.education}
+              constants={curContent.constants.education}
+            />
+            <Projects
+              content={curContent.content.projects}
+              constants={curContent.constants.projects}
+            />
+            <Skills
+              content={curContent.content.skills}
+              constants={curContent.constants.skills}
+            />
+            <Experience
+              content={curContent.content.experience}
+              constants={curContent.constants.experience}
+            />
+            <Interests
+              content={curContent.content.interests}
+              constants={curContent.constants.interests}
+            />
+            <div className="thanks">
+              <h2>{curContent.constants.thanks.THANKS_READING}</h2>
+              <Logo />
+            </div>
           </div>
         </div>
       </div>

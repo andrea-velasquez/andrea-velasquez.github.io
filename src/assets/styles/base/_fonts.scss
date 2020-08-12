@@ -1,0 +1,10 @@
+$font-path: '../../fonts';
+
+@font-face{
+  font-family: veraType;
+  src: url('#{$font-path}/veraType.ttf');
+}
+@font-face{
+  font-family: jrhand;
+  src: url('#{$font-path}/jrhand.ttf');
+}

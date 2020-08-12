@@ -1,0 +1,22 @@
+/* Dependencies:
+*    base/_mixins
+*    themes/_themes
+*/
+
+#Header {
+  margin-right: 30%;
+}
+
+#Header .field .field__name .logo svg{
+  @include resizeAspectRatio(1rem);
+  margin-right: 0.5em;
+  path {
+    @include theme-aware('fill', 'color-logos-main', $themes);
+    // fill: $color-logos-main;
+  }
+}
+
+#Header .field__account {
+ display: inline-block;
+ @include twoColumnContent(7.5rem);
+}

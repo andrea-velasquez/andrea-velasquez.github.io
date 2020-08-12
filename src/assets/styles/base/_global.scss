@@ -1,0 +1,81 @@
+body{
+  background-color: $color-desk;
+  
+  font-family: veraType;
+}
+
+#app {
+  position: relative;
+  overflow: hidden;
+  @include theme-aware('color', 'color-text', $themes);
+}
+
+.paper {
+  position: relative;
+  margin: 5% 15% 5% 5%;
+  font-family: "veraType";
+  @include theme-aware('background-color', 'color-paper', $themes);
+  padding: 3em;
+}
+
+.field .field__name,
+.section__title {
+  color: $color-titles;
+}
+
+.field,
+.project {
+  margin-bottom: $field-inter-spacing;
+}
+
+// Note: Fields in a field group actually have a double spacing between them: the inter-spacing
+// (between each field) and the intra-spacing (between fields name). However, the divs
+// wrapping this fields usually ignore the size of its contents (and the intra-spacing),
+// leaving only the inter-spacing and avoid the double space. This doesn't happen when the
+// field group is aligned in two columns (wrapper div display is inline-block and fits its
+// content) and to avoid the double space the intra-spacing shouldn't be applied.
+// Aaand.. that's why there's a ':not(.field--twocolumn)'
+.field .field__name,
+.field__group:not(.field--twocolumn) div,
+.section__title,
+.project .project__details div {
+  margin: 0px 0px $field-intra-spacing 0px;
+}
+
+p.field__text, p.polaroid-film__caption {
+  line-height: $field-text-spacing;
+}
+
+hr {
+  border-top: none;
+  border-bottom: dotted $color-divider;
+  margin: $field-inter-spacing 0px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+
+.thanks {
+  display: flex;
+  padding: 1em;
+  justify-content: flex-end;
+  color: $color-titles;
+
+  svg {
+    margin: -6rem 0rem -2rem 2rem;
+    @include resizeAspectRatio(10rem);
+    transform: rotate(30deg);
+    path { fill: $color-logos-main; }
+  }
+
+}

@@ -1,0 +1,26 @@
+/* Dependencies:
+*    base/_mixins
+*/
+
+#MainPhoto {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+
+  svg {
+    position: absolute;
+    right: 0;
+    @include resizeAspectRatio(7rem);
+    transform: translateX(28%) translateY(-25%);
+    z-index: 1;
+  }
+
+  .polaroid-film {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem 2rem 0 0;
+    transform: rotate(8deg);
+  }
+}

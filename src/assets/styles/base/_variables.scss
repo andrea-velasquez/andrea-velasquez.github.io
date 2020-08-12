@@ -1,0 +1,22 @@
+/* 
+ * Main colors (apply for light and dark theme)
+ */
+$color-desk: #855532;
+$color-titles: #C3272E;
+$color-logos-main: #C3272E;
+$color-divider: #C3272E;
+$color-progress-filled: #C3272E;
+$color-progress-empty: #F6DEDF;
+
+/* 
+ * Spacing
+ */
+$field-inter-spacing: 1em; // Spacing between fields
+$field-intra-spacing: $field-inter-spacing/3; // Spacing between field name and text
+$field-text-spacing: 1em + $field-inter-spacing/3; // Spacing between lines in field text
+
+/* 
+ * Nav settings
+ */
+$nav-links-size: 1.25rem;
+$nav-color-opacity: 0.4;
