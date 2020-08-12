@@ -62,7 +62,6 @@ class App extends Component {
           <Background />
           <Nav
             constants={curContent.constants.nav}
-            content={curContent.content.nav}
             onChangeLang={ this.onChangeLang }
             onChangeTheme={ this.onChangeTheme }
             otherLang={ this.getOtherLang() }

@@ -42,6 +42,14 @@
   "nav": {
     "LANG": "Lang",
     "THEME": "Theme",
-    "PDF_HERE": "Printable PDF"
+    "PDF_HERE": "Printable PDF",
+    "sections": {
+      "DESCRIPTION": "Description",
+      "EDUCATION": "Education",
+      "PROJECTS": "Projects",
+      "SKILLS": "Skills",
+      "EXPERIENCE": "Experience",
+      "INTERESTS": "Interests"
+    }
   }
 }

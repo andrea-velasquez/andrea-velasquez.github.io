@@ -43,6 +43,14 @@
     "EXPERIENCE": "Experiencia",
     "LANG": "Idioma",
     "THEME": "Tema",
-    "PDF_HERE": "PDF para imprimir"
+    "PDF_HERE": "PDF para imprimir",
+    "sections": {
+      "DESCRIPTION": "Descripción",
+      "EDUCATION": "Educación",
+      "PROJECTS": "Proyectos",
+      "SKILLS": "Habilidades",
+      "EXPERIENCE": "Experiencia",
+      "INTERESTS": "Intereses"
+    }
   }
 }

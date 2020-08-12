@@ -4,7 +4,7 @@ import { ReactComponent as MoonIcon } from "../assets/images/icons/moon.svg";
 import { ReactComponent as PdfIcon } from "../assets/images/icons/pdf.svg";
 
 const capitalize = (w) => {
-  w = w[0].toUpperCase() + w.slice(1);
+  w = w[0].toUpperCase() + w.slice(1).toLowerCase();
   return w;
 };
 
@@ -12,7 +12,6 @@ class Nav extends Component {
   render() {
     const {
       constants,
-      content,
       otherLang,
       theme,
       onChangeLang,
@@ -22,8 +21,8 @@ class Nav extends Component {
     return (
       <nav id="nav">
         <div className="nav__links">
-          {content.sections.map((section, idx) => (
-            <a key={idx} href={`#${section}`}>{section}</a>
+          {Object.keys(constants.sections).map((section, idx) => (
+            <a key={idx} href={`#${capitalize(section)}`}>{constants.sections[section]}</a>
           ))}
         </div>
         <div className="nav__options">
