@@ -1,19 +1,21 @@
-#Header .field__subject, #Header .field__occupation {
-  width: 50%;
-  @include lg {
-    width: 70%;
+#Header {
+  .field__subject, .field__occupation {
+    width: 50%;
+    @include lg {
+      width: 70%;
+    }
   }
-}
 
-#Header .field .field__name .logo svg{
-  @include resizeAspectRatio(1rem);
-  margin-right: 0.5em;
-  path {
-    @include theme-aware('fill', 'color-logos-main', $themes);
+  .field__account {
+   display: inline-block;
+   @include twoColumnContent(7.5rem);
   }
-}
 
-#Header .field__account {
- display: inline-block;
- @include twoColumnContent(7.5rem);
+ .field .field__name .logo svg{
+    @include resizeAspectRatio(1rem);
+    margin-right: 0.5em;
+    path {
+      @include theme-aware('fill', 'color-logos-main', $themes);
+    }
+  }
 }
