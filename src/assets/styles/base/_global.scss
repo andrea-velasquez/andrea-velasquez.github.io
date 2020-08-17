@@ -64,18 +64,3 @@ h3 {
 h4 {
   font-size: 1.25rem;
 }
-
-.thanks {
-  display: flex;
-  padding: 1em;
-  justify-content: flex-end;
-  color: $color-titles;
-
-  svg {
-    margin: -6rem 0rem -2rem 2rem;
-    @include resizeAspectRatio(10rem);
-    transform: rotate(30deg);
-    path { fill: $color-logos-main; }
-  }
-
-}

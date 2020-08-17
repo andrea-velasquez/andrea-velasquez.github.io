@@ -1,0 +1,16 @@
+.thanks {
+  display: flex;
+  justify-content: flex-end;
+  color: $color-titles;
+  padding: 4em 1em 1em 1em;
+  @include xl { padding-top: 1em;  }
+
+  svg {
+    @include resizeAspectRatio(10rem);
+    transform: rotate(30deg);
+    path { fill: $color-logos-main; }
+
+    margin: -4rem 0rem -2rem 2rem;
+    @include xl { margin-top: -6rem; }
+  }
+}
