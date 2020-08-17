@@ -1,5 +1,7 @@
 .projects {
-  @include scrollingWrapper;
+  @include md {
+    @include scrollingWrapper;
+  }
 }
 
 .project{
