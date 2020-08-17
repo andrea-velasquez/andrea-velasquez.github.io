@@ -1,5 +1,8 @@
-#Header {
-  margin-right: 30%;
+#Header .field__subject, #Header .field__occupation {
+  width: 50%;
+  @include lg {
+    width: 70%;
+  }
 }
 
 #Header .field .field__name .logo svg{
