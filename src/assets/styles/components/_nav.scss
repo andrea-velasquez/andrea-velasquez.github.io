@@ -1,20 +1,58 @@
 #nav {
-  z-index: 1;
-  display: inline-sblock;
+  z-index: 2;
+  display: inline-block;
   position: fixed;
   margin-top: 10%;
   right: 0;
-  max-width: 15%;
-  min-width: 180px;
   text-align: right;
+  white-space: nowrap;
+
+}
+
+.nav__expand-button {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px 0 0 10px;
+  background-color: rgba(#000, $nav-color-opacity);
+  cursor: pointer;
+  svg{
+    height: 3rem;
+    width: 2rem;
+  }
+  transition: background-color .2s;
+  @include xl {
+    display: none;
+  }
+}
+
+.nav__expand-button:hover {
+  background-color: rgba($color-logos-main, .5);
 }
 
 .nav__links {
-  display: block;
+  $width: calc(100%-2rem);
+  display: inline-block;
+  overflow: hidden;
+  
+  padding: 1px 1em 1px 1em; // <a> margin will act as top bottom padding
+  width: 70%;
+
+  transition: width .5s;
+
   background-color: rgba(#000, $nav-color-opacity);
-  padding: 1px 1em; // <a> margin will act as top bottom padding
-  padding-left: 2em;
+  
   text-align: right;
+  border-radius: 0 0 0 10px;
+
+  @include xl {
+    border-top-left-radius: 10px;
+    width: 80%;
+  }
+
+  &.collapsed {
+    padding: 0;
+    width: 0;
+  }
 
   a {
     display: block;
@@ -78,4 +116,5 @@
 .nav__option:hover {
   span { color: lighten($color-logos-main, 10%); }
   button { background-color: rgba($color-logos-main, .5); }
+
 }
