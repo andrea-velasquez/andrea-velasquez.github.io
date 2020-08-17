@@ -4,10 +4,14 @@
 
 .field__group.field__education {
   vertical-align: top;
+  margin-top: 0;
+
+  @include lg {
+    margin-top: 2em;
+  }
 }
 
 #Education .polaroid-film {
-  position: relative;
-  // transform: translateY(-20%); // don't apply on small screens
-  margin: -3em 10%; // don't apply on small screens
+  display: inline-block;
+  margin: -0.5em 2em 1em 0;
 }
