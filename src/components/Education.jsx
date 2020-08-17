@@ -14,7 +14,7 @@ class Education extends Component {
           groupFieldClass="education"
           singleFieldClass="university"
         />
-        <PolaroidFilm src={utecImg} height="120rem" width="160rem" />
+        <PolaroidFilm withTape={true} src={utecImg} height="120rem" width="160rem" />
       </section>
     );
   }

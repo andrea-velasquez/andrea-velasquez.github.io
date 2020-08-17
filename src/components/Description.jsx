@@ -6,9 +6,14 @@ class Description extends Component {
     return (
       <section id="Description">
           <h2 className="field__name section__title">{ constants.DESCRIPTION }</h2>
-          <p className="field field__text">
-            { content }
-          </p>
+          <div className="field">
+          {content.split("\n").map((paragraph, idx) => 
+            <p key={idx} className="field__text">
+              { paragraph }
+            </p>
+          )}
+          </div>
+          
       </section>
     );
   }

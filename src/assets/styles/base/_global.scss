@@ -43,7 +43,8 @@ body{
 }
 
 p.field__text, p.polaroid-film__caption {
-  line-height: $field-text-spacing;
+  line-height: $field-text-intra-spacing;
+  margin-bottom: $field-text-inter-spacing;
 }
 
 hr {

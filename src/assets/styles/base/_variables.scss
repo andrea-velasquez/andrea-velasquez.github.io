@@ -13,7 +13,8 @@ $color-progress-empty: #F6DEDF;
  */
 $field-inter-spacing: 1em; // Spacing between fields
 $field-intra-spacing: $field-inter-spacing/3; // Spacing between field name and text
-$field-text-spacing: 1em + $field-inter-spacing/3; // Spacing between lines in field text
+$field-text-intra-spacing: 1em + $field-inter-spacing/3; // Spacing between lines in field text
+$field-text-inter-spacing: 0.5em; // Spacing between field texts
 
 /* 
  * Nav settings
