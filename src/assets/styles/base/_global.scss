@@ -1,12 +1,11 @@
 body{
   background-color: $color-desk;
-  
   font-family: veraType;
 }
 
 #app {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   @include theme-aware('color', 'color-text', $themes);
 }
 
