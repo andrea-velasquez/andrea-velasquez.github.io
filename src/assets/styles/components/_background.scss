@@ -2,6 +2,11 @@
   position: absolute;
   @include theme-aware('filter', 'background-brightness', $themes);
 
+  display: none;
+  @include md {
+    display: unset;
+  }
+
   &.folder {
     height: 100%;
     z-index: -1;
@@ -13,8 +18,14 @@
     height: 15%;
     width: auto;
     z-index: 1;
-    right: 5%;
     top: 30%;
+    right: -4em;
+    @include lg {
+      right: 0;
+    }
+    @include xl {
+      right: 5%;
+    }
   }
 
   &.typewriter {
@@ -23,6 +34,13 @@
     z-index: 1;
     right: 0;
     bottom: 10%;
-    transform: translateX(10em);
+    transform: translateX(20em);
+    @include lg {
+      transform: translateX(15em);
+    }
+    @include xl {
+      transform: translateX(10em);
+    }
+    
   }
 }
