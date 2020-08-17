@@ -21,3 +21,13 @@ $field-text-inter-spacing: 0.5em; // Spacing between field texts
  */
 $nav-links-size: 1.25rem;
 $nav-color-opacity: 0.4;
+
+/* 
+ * Breakpoints
+ */
+$screen-bp-min: (
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+)

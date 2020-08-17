@@ -24,6 +24,37 @@
   }
 }
 
+/* Breakpoints */
+@mixin sm {
+  @media (min-width: map-get($screen-bp-min, 'sm')){
+    @content
+  }
+}
+
+@mixin md {
+  @media (min-width: map-get($screen-bp-min, 'md')){
+    @content
+  }
+}
+
+@mixin lg {
+  @media (min-width: map-get($screen-bp-min, 'lg')){
+    @content
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($screen-bp-min, 'xl')){
+    @content
+  }
+}
+
+@mixin custom-screen($bp) {
+  @media (min-width: $bp){
+    @content
+  }
+}
+
 
 /** From: https://blog.prototypr.io/how-i-theme-my-react-app-with-sass-414e8f905541
  *
