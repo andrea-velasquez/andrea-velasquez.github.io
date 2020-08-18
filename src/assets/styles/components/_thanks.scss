@@ -6,7 +6,7 @@
   @include from('xl') { padding-top: 1em;  }
 
   svg {
-    @include resizeAspectRatio(10rem);
+    @include resize-aspect-ratio(10rem);
     transform: rotate(30deg);
     path { fill: $color-logos-main; }
 

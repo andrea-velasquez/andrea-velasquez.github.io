@@ -6,7 +6,7 @@
   svg {
     position: absolute;
     right: 0;
-    @include resizeAspectRatio(7rem);
+    @include resize-aspect-ratio(7rem);
     transform: translateX(28%) translateY(-25%);
     z-index: 1;
   }

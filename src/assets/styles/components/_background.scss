@@ -15,7 +15,7 @@
   }
 
   &.pen {
-    @include resizeAspectRatio(15%);
+    @include resize-aspect-ratio(15%);
     z-index: 1;
     top: 30%;
     right: -4em;
@@ -28,7 +28,7 @@
   }
 
   &.typewriter {
-    @include resizeAspectRatio(30%);
+    @include resize-aspect-ratio(30%);
     z-index: 1;
     right: 0;
     bottom: 10%;

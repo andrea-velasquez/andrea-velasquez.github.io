@@ -8,11 +8,11 @@
 
   .field__account {
    display: inline-block;
-   @include twoColumnContent(7.5rem);
+   @include two-column-content(7.5rem);
   }
 
  .field .field__name .logo svg{
-    @include resizeAspectRatio(1rem);
+    @include resize-aspect-ratio(1rem);
     margin-right: 0.5em;
     path {
       @include theme-aware('fill', 'color-logos-main', $themes);

@@ -38,7 +38,7 @@
     }
 
     .logo svg {
-      @include resizeAspectRatio(1rem);
+      @include resize-aspect-ratio(1rem);
       path { fill: $color-logos-main; }
     }
   }

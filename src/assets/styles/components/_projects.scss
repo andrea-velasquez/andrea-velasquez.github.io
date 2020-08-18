@@ -1,6 +1,6 @@
 .projects {
   @include from('md') {
-    @include scrollingWrapper;
+    @include scrolling-wrapper;
   }
 }
 
@@ -13,7 +13,7 @@
       }
 
       .logo svg{
-        @include resizeAspectRatio(1rem);
+        @include resize-aspect-ratio(1rem);
         margin-left: 0.1em;
         path {
           @include theme-aware('fill', 'color-logos-secondary', $themes);

@@ -1,8 +1,8 @@
-@mixin resizeAspectRatio($height) {
+@mixin resize-aspect-ratio($height) {
   height: $height;
   width: auto;
 }
-@mixin twoColumnContent($leftWidth, $rightWidth: calc(100%-#{$leftWidth})) {
+@mixin two-column-content($leftWidth, $rightWidth: calc(100%-#{$leftWidth})) {
   width:100%;
   &>:nth-child(2n-1) {
     width: $leftWidth;
@@ -14,7 +14,7 @@
   }
 }
 
-@mixin scrollingWrapper {
+@mixin scrolling-wrapper {
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
