@@ -44,14 +44,14 @@
   text-align: right;
   border-radius: 0 0 0 10px;
 
-  @include xl {
-    border-top-left-radius: 10px;
-    width: 80%;
-  }
-
   &.collapsed {
     padding: 0;
     width: 0;
+  }
+
+  @include xl {
+    border-top-left-radius: 10px;
+    width: 80%;
   }
 
   a {
@@ -71,6 +71,39 @@
 
 .nav__options {
   text-align: center;
+  position: fixed;
+  display: inline-block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include xl {
+    position: static;
+    display: block;
+    transform: translateX(0);
+  }
+
+  .nav__option {
+    vertical-align: top;
+    span {
+      vertical-align: top;
+      display: inline-block;
+      height: 3em;
+      transition: height .5s;
+      @include wrapText;
+      width: 5rem;
+      overflow: hidden;
+
+      @include xl {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+  &.collapsed span {
+    height: 0;
+  }
 }
 
 .nav__option {
@@ -85,6 +118,10 @@
 
   span {
     transition: color .2s;
+    @include theme-aware(color, color-text, $themes);
+    @include xl {
+      color: #fff !important;
+    }
   }
 
   button {
@@ -95,6 +132,7 @@
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
+    
     margin-bottom: 0.2rem;
     background-color: rgba(#000, $nav-color-opacity);
     cursor: pointer;
@@ -116,5 +154,4 @@
 .nav__option:hover {
   span { color: lighten($color-logos-main, 10%); }
   button { background-color: rgba($color-logos-main, .5); }
-
 }

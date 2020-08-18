@@ -14,29 +14,46 @@ const xlScreenWidth = 1200;
 
 class Nav extends Component {
   state = {
-    collapsed: false
+    menuCollapsed: false,
+    optionsCollapsed: false
   }
   
-  onWindowResize = () => {
-    let collapsed = this.state;
-    if (xlScreenWidth > window.innerWidth && collapsed)
-      this.setState({collapsed: true});
+  handleWindowResize = () => {
+    let menuCollapsed = this.state;
+    if (xlScreenWidth > window.innerWidth && menuCollapsed)
+      this.setState({menuCollapsed: true});
     else if (xlScreenWidth < window.innerWidth)
-      this.setState({collapsed: false});
+      this.setState({menuCollapsed: false});
+  }
+
+  handleScroll = (e) => {
+    let optionsCollapsed = this.state;
+    var currentPos = window.pageYOffset;
+
+    optionsCollapsed = this.prev < currentPos; // scrolling down 
+
+    if (this.state.optionsCollapsed !== optionsCollapsed
+        && xlScreenWidth > window.innerWidth)
+      this.setState({optionsCollapsed});
+
+    this.prev = window.scrollY;
   }
 
   toggleMenu = () => {
-    const collapsed = !this.state.collapsed;
-    this.setState({ collapsed });
+    const menuCollapsed = !this.state.menuCollapsed;
+    this.setState({ menuCollapsed });
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.onWindowResize);
-    this.onWindowResize();
+    this.prev = window.scrollY;
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('resize', this.handleWindowResize);
+    this.handleWindowResize();
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.onWindowResize);
+    window.removeEventListener('resize', this.handleWindowResize);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   render() {
@@ -51,19 +68,19 @@ class Nav extends Component {
     return (
       <nav id="nav">
         <div className="nav__expand-button" onClick={this.toggleMenu}>
-          { this.state.collapsed
+          { this.state.menuCollapsed
             ? <LeftArrow/>
             : <RightArrow/>
           }
         </div>
         { 
-          <div className={`nav__links ${this.state.collapsed? "collapsed" : ""}`}>
+          <div className={`nav__links ${this.state.menuCollapsed? "collapsed" : ""}`}>
             {Object.keys(constants.sections).map((section, idx) => (
               <a key={idx} href={`#${capitalize(section)}`}>{constants.sections[section]}</a>
             ))}
           </div>
         }
-        <div className="nav__options">
+        <div className={`nav__options ${this.state.optionsCollapsed? "collapsed" : ""}`}>
           <div className="nav__option" id="language">
             <button onClick={onChangeLang}>{capitalize(otherLang)}</button>
             <span>{constants.LANG}</span>
@@ -74,7 +91,7 @@ class Nav extends Component {
             </button>
             <span>{constants.THEME}</span>
           </div>
-          <br />
+          {xlScreenWidth > window.innerWidth || <br />}
           <div className="nav__option" id="pdf">
             <button>
               <PdfIcon />

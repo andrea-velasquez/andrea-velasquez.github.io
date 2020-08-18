@@ -24,6 +24,11 @@
   }
 }
 
+@mixin wrapText {
+  white-space: normal;
+  overflow: visible;
+}
+
 /* Breakpoints */
 @mixin sm {
   @media (min-width: map-get($screen-bp-min, 'sm')){
