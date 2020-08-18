@@ -1,17 +1,4 @@
 $themes: (
-  light: (
-    color-text: #000000,
-    color-logos-secondary: #000000,
-    color-paper: #FFFFFF,
-    color-polaroid: #EBEBEB,
-    background-brightness: brightness(1)
-  ),
-
-  dark: (
-    color-text: #EBEBEB,
-    color-logos-secondary: #fff,
-    color-paper: #323232,
-    color-polaroid: #707070,
-    background-brightness: brightness(0.7)
-  )
-)
+  light: $light,
+  dark: $dark
+);
