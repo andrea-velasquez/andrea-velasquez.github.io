@@ -1,5 +1,5 @@
 .projects {
-  @include md {
+  @include from('md') {
     @include scrollingWrapper;
   }
 }

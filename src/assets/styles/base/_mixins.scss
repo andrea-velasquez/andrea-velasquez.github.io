@@ -24,37 +24,51 @@
   }
 }
 
-@mixin wrapText {
-  white-space: normal;
-  overflow: visible;
+@mixin smooth-hover-anim($color, $speed, $property) {
+  transition: $property $speed;
+  &:hover {
+    #{$property}: $color;
+  }
+}
+
+@mixin absolute-center {
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+@mixin block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin squared-size($size) {
+  height: $size;
+  width: $size;
 }
 
 /* Breakpoints */
-@mixin sm {
-  @media (min-width: map-get($screen-bp-min, 'sm')){
+@mixin from($size) {
+  @media only screen and (min-width: map-get($screen-bp-min, $size)){
     @content
   }
 }
 
-@mixin md {
-  @media (min-width: map-get($screen-bp-min, 'md')){
+@mixin up-to($size) {
+  @media only screen and (max-width: map-get($screen-bp-max, $size)){
     @content
   }
 }
 
-@mixin lg {
-  @media (min-width: map-get($screen-bp-min, 'lg')){
+@mixin only-on($size) {
+  @media only screen
+    and (min-width: map-get($screen-bp-min, $size))
+    and (max-width: map-get($screen-bp-max, $size))
+  {
     @content
   }
 }
 
-@mixin xl {
-  @media (min-width: map-get($screen-bp-min, 'xl')){
-    @content
-  }
-}
-
-@mixin custom-screen($bp) {
+@mixin from-custom-screen($bp) {
   @media (min-width: $bp){
     @content
   }

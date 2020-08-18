@@ -7,6 +7,7 @@ $color-logos-main: #C3272E;
 $color-divider: #C3272E;
 $color-progress-filled: #C3272E;
 $color-progress-empty: #F6DEDF;
+$color-nav: #000; // used with $nav-color-opacity in rgba(color, opacity)
 
 /* 
  * Spacing
@@ -25,9 +26,16 @@ $nav-color-opacity: 0.4;
 /* 
  * Breakpoints
  */
-$screen-bp-min: (
-  sm: 480px,
+$screen-bp-min: ( 
+  sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px
-)
+);
+
+$screen-bp-max: (
+  xs: map-get($screen-bp-min, 'sm'),
+  sm: map-get($screen-bp-min, 'md'),
+  md: map-get($screen-bp-min, 'lg'),
+  lg: map-get($screen-bp-min, 'xl')
+);

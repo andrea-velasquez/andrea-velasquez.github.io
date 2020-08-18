@@ -4,9 +4,8 @@
 
 .field__group.field__education {
   vertical-align: top;
-  margin-top: 0;
 
-  @include lg {
+  @include from('lg') {
     margin-top: 2em;
   }
 }

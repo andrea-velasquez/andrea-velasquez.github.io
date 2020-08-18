@@ -6,7 +6,9 @@ class Experience extends Component {
     const { content, constants } = this.props;
     return (
       <section id="Experience">
-        <h2 className="section__title">{constants.WORK_EXPERIENCE_ACTIVITIES}</h2>
+        <h2 className="section__title">
+          {constants.WORK_EXPERIENCE_ACTIVITIES}
+        </h2>
         <div>
           <FieldBlock
             fields={content.experiences}

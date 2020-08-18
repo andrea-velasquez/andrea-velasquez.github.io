@@ -2,9 +2,9 @@
   position: absolute;
   @include theme-aware('filter', 'background-brightness', $themes);
 
-  display: none;
-  @include md {
-    display: unset;
+  // Avoid showing on smaller screens
+  @include up-to('md') {
+    display: none;
   }
 
   &.folder {
@@ -15,32 +15,29 @@
   }
 
   &.pen {
-    height: 15%;
-    width: auto;
+    @include resizeAspectRatio(15%);
     z-index: 1;
     top: 30%;
     right: -4em;
-    @include lg {
+    @include from('lg') {
       right: 0;
     }
-    @include xl {
+    @include from('xl') {
       right: 5%;
     }
   }
 
   &.typewriter {
-    height: 30%;
-    width: auto;
+    @include resizeAspectRatio(30%);
     z-index: 1;
     right: 0;
     bottom: 10%;
     transform: translateX(20em);
-    @include lg {
+    @include from('lg') {
       transform: translateX(15em);
     }
-    @include xl {
+    @include from('xl') {
       transform: translateX(10em);
     }
-    
   }
 }

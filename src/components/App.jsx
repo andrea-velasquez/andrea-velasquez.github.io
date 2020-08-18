@@ -35,23 +35,23 @@ class App extends Component {
   state = {
     languages: ["es", "en"],
     curLanguage: "es",
-    theme: "light"
+    theme: "light",
   };
 
   onChangeLang = (lang) => {
-    this.setState( {curLanguage: this.getOtherLang()} );
-  }
+    this.setState({ curLanguage: this.getOtherLang() });
+  };
 
   onChangeTheme = () => {
     let isLight = this.state.theme === "light";
-    let newTheme = isLight? "dark" : "light";
+    let newTheme = isLight ? "dark" : "light";
 
-    this.setState( {theme: newTheme} );
-  }
+    this.setState({ theme: newTheme });
+  };
 
   getOtherLang = () => {
-    return this.state.curLanguage === "es"? "en" : "es";
-  }
+    return this.state.curLanguage === "es" ? "en" : "es";
+  };
 
   render() {
     let { curLanguage, theme } = this.state;
@@ -62,10 +62,10 @@ class App extends Component {
           <Background />
           <Nav
             constants={curContent.constants.nav}
-            onChangeLang={ this.onChangeLang }
-            onChangeTheme={ this.onChangeTheme }
-            otherLang={ this.getOtherLang() }
-            theme={ theme }
+            onChangeLang={this.onChangeLang}
+            onChangeTheme={this.onChangeTheme}
+            otherLang={this.getOtherLang()}
+            theme={theme}
           />
           <div className="paper">
             <MainPhoto />

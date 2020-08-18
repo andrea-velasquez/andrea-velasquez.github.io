@@ -6,51 +6,48 @@
   right: 0;
   text-align: right;
   white-space: nowrap;
-
 }
 
-.nav__expand-button {
-  display: inline-block;
+.nav__collapse-button {
+  display: inline-block; // stay next to nav menu
   vertical-align: top;
   border-radius: 10px 0 0 10px;
-  background-color: rgba(#000, $nav-color-opacity);
+  background-color: rgba($color-nav, $nav-color-opacity);
   cursor: pointer;
-  svg{
+
+  @include smooth-hover-anim(rgba($color-logos-main, .5), .2s, background-color);
+
+  svg {
     height: 3rem;
     width: 2rem;
   }
-  transition: background-color .2s;
-  @include xl {
+
+  // large screens don't need a collapsing menu
+  @include from('xl') { 
     display: none;
   }
 }
 
-.nav__expand-button:hover {
-  background-color: rgba($color-logos-main, .5);
-}
-
-.nav__links {
-  $width: calc(100%-2rem);
+.nav__menu {
   display: inline-block;
-  overflow: hidden;
-  
-  padding: 1px 1em 1px 1em; // <a> margin will act as top bottom padding
-  width: 70%;
-
-  transition: width .5s;
-
-  background-color: rgba(#000, $nav-color-opacity);
-  
+  padding: 1px 1em 1px 1em; // 1px because <a> margin will act as top bottom padding
+  background-color: rgba($color-nav, $nav-color-opacity);
   text-align: right;
-  border-radius: 0 0 0 10px;
+  border-bottom-left-radius: 10px; // top corner has the collapse button
+
+  // Collapsed styles
+  overflow: hidden;
+  width: 70%; // to show transition width must be defined.
+              // making it wider will overflow container and mess with text styles
+  transition: width .5s;
 
   &.collapsed {
     padding: 0;
     width: 0;
   }
 
-  @include xl {
-    border-top-left-radius: 10px;
+  @include from('xl') {
+    border-top-left-radius: 10px; // no collapsed button
     width: 80%;
   }
 
@@ -61,44 +58,18 @@
     font-size: $nav-links-size;
     margin: 1em 0;
 
-    transition: color .2s;
-
-    &:hover {
-      color: lighten($color-logos-main, 10%);
-    }
+    @include smooth-hover-anim(lighten($color-logos-main, 10%), .2s, color);
   }
+  
 }
 
 .nav__options {
   text-align: center;
-  position: fixed;
-  display: inline-block;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-
-  @include xl {
-    position: static;
-    display: block;
-    transform: translateX(0);
-  }
-
-  .nav__option {
-    vertical-align: top;
-    span {
-      vertical-align: top;
-      display: inline-block;
-      height: 3em;
-      transition: height .5s;
-      @include wrapText;
-      width: 5rem;
-      overflow: hidden;
-
-      @include xl {
-        height: auto;
-        width: auto;
-      }
-    }
+  
+  @include up-to('lg') {
+    position: fixed;
+    top: 0;
+    @include absolute-center;
   }
 
   &.collapsed span {
@@ -109,49 +80,67 @@
 .nav__option {
   display: inline-block;
   margin: 1rem;
-  margin-bottom: 0;
-  color: #fff;
-  font-family: "veraType";
-  font-size: 1rem;
-  text-align: center;
   cursor: pointer;
 
-  span {
-    transition: color .2s;
+  // XL screens styles
+  margin-bottom: 0;
+
+  @include up-to('lg') {
     @include theme-aware(color, color-text, $themes);
-    @include xl {
-      color: #fff !important;
+  }
+
+  @include from('lg') {
+    color: #fff;
+  }
+
+  span {
+    display: inline-block;
+
+    vertical-align: top; // make animation go from bottom
+                         // to top, instead of to the center
+    transition: height .5s, color .2s;
+
+    @include up-to('lg') {
+      // wrap text, width needed or else it expands
+      white-space: normal;
+      width: 6rem;
+
+      // Height must be bigger than the content
+      // to avoid hidding the overflow.
+      // The overflow is needed to hide content
+      // when the animation makes height=0
+      height: 3em;
+      overflow: hidden;
     }
   }
 
   button {
     display: block;
-    height: 3rem;
-    width: 3rem;
+    @include squared-size(3rem);
+    @include block-center;
+    margin-bottom: 0.2rem;
     border: 0;
     border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    
-    margin-bottom: 0.2rem;
-    background-color: rgba(#000, $nav-color-opacity);
+    background-color: rgba($color-nav, $nav-color-opacity);
     cursor: pointer;
-
-    color: inherit;
-    font-family: inherit;
-    font-size: 1.5rem;
-
     transition: background-color .2s;
-
+    
     svg {
       vertical-align: middle;
-      height: 1.5rem;
-      width: 1.5rem;
+      @include squared-size(1.5rem);
     }
   }
-}
+  &.language button {
+    // Language has text instead of a svg
+    font-size: 1.5rem;
+    color: #fff;
+    font-family: inherit; // Vera Type
+  }
 
-.nav__option:hover {
-  span { color: lighten($color-logos-main, 10%); }
-  button { background-color: rgba($color-logos-main, .5); }
+  // Change color of button and span on hover
+  // Transitions for both have been set previously
+  &:hover {
+    button { background-color: rgba($color-logos-main, .5) }
+    span { color: lighten($color-logos-main, 10%); }
+  }
 }

@@ -3,7 +3,7 @@
   justify-content: flex-end;
   color: $color-titles;
   padding: 4em 1em 1em 1em;
-  @include xl { padding-top: 1em;  }
+  @include from('xl') { padding-top: 1em;  }
 
   svg {
     @include resizeAspectRatio(10rem);
@@ -11,6 +11,6 @@
     path { fill: $color-logos-main; }
 
     margin: -4rem 0rem -2rem 2rem;
-    @include xl { margin-top: -6rem; }
+    @include from('xl') { margin-top: -6rem; }
   }
 }

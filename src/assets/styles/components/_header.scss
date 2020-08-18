@@ -1,7 +1,7 @@
 #Header {
   .field__subject, .field__occupation {
     width: 50%;
-    @include lg {
+    @include from('lg') {
       width: 70%;
     }
   }

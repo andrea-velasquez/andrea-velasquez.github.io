@@ -9,7 +9,12 @@ class Education extends Component {
     return (
       <section id="Education">
         <h2 className="section__title">{constants.EDUCATION}</h2>
-        <PolaroidFilm withTape={true} src={utecImg} height="120rem" width="160rem" />
+        <PolaroidFilm
+          withTape={true}
+          src={utecImg}
+          height="120rem"
+          width="160rem"
+        />
         <FieldBlock
           fields={content.universities}
           groupFieldClass="education"

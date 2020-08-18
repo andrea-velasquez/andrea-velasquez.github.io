@@ -73,32 +73,28 @@ class Projects extends Component {
   };
 
   getLogos = (technologies) => {
-    let logos = technologies.reduce(
-      (logos, technology) => {
-        logos[technology] = svgLogos[technology];
-        return logos;
-      },
-      {}
-    );
+    let logos = technologies.reduce((logos, technology) => {
+      logos[technology] = svgLogos[technology];
+      return logos;
+    }, {});
     return logos;
-  }
+  };
 
   render() {
     let { content: projects, constants } = this.props;
     return (
       <section id="Projects">
-        <h2 className="section__title">{ constants.PROJECTS }</h2>
+        <h2 className="section__title">{constants.PROJECTS}</h2>
         <div className="projects">
           {projects.map((project, index) => (
-              <Project
-                key={index}
-                project={project}
-                techLogos={this.getLogos(project.technologies)}
-                image={projectsImgs[project.imageFilename]}
-                constants={constants}
-              />
-            )
-          )}
+            <Project
+              key={index}
+              project={project}
+              techLogos={this.getLogos(project.technologies)}
+              image={projectsImgs[project.imageFilename]}
+              constants={constants}
+            />
+          ))}
         </div>
       </section>
     );
