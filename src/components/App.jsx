@@ -42,7 +42,8 @@ class App extends Component {
     this.setState({ curLanguage: this.getOtherLang() });
   };
 
-  onChangeTheme = () => {
+  onChangeTheme = (e) => {
+    e.preventDefault();
     let isLight = this.state.theme === "light";
     let newTheme = isLight ? "dark" : "light";
 
