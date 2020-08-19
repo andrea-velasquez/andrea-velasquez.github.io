@@ -30,16 +30,14 @@ class Nav extends Component {
     let optionsCollapsed = this.state;
     var currentPos = window.pageYOffset;
 
-    optionsCollapsed = this.prev < currentPos; // scrolling down
+    optionsCollapsed = this.prev < currentPos && currentPos!==0; // scrolling down
 
-    if (
-      this.state.optionsCollapsed !== optionsCollapsed &&
-      xlScreenWidth > window.innerWidth
-    )
-      this.setState({ optionsCollapsed });
-
-    if (!this.state.menuCollapsed)
-      this.setState({ menuCollapsed: true });
+    if (xlScreenWidth > window.innerWidth){
+      if (this.state.optionsCollapsed !== optionsCollapsed)
+        this.setState({ optionsCollapsed });
+      if (!this.state.menuCollapsed)
+        this.setState({ menuCollapsed: true });
+    }
 
     this.prev = window.scrollY;
   };
@@ -99,7 +97,7 @@ class Nav extends Component {
             <span>{constants.LANG}</span>
           </div>
           <div className="nav__option theme">
-            <button onClick={onChangeTheme}>
+            <button onClick={(e) => onChangeTheme(e)}>
               {theme === "light" ? <MoonIcon /> : <SunIcon />}
             </button>
             <span>{constants.THEME}</span>
