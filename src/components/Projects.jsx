@@ -20,9 +20,17 @@ const svgLogos = reqToObject(reqLogosSvgs);
 const projectsImgs = reqToObject(reqProjectsImgs);
 
 class Projects extends Component {
+  toFilename = (name) => {
+    return name
+          .toLowerCase()
+          .replace(".", "")
+          .replace(" ", "-");
+  }
+
   getLogos = (technologies) => {
     let logos = technologies.reduce((logos, technology) => {
-      logos[technology] = svgLogos[technology];
+      let filename = this.toFilename(technology);
+      logos[technology] = svgLogos[filename];
       return logos;
     }, {});
     return logos;

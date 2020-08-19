@@ -30,7 +30,7 @@
       "imageFilename": "personal-website",
       "year": "2020",
       "link": "#",
-      "technologies": ["react", "sass"]
+      "technologies": ["React", "Sass"]
     },
     {
       "name": "Yapay",
@@ -38,12 +38,12 @@
       "year": "2019",
       "link": "https://github.com/utec-yapay/yape-bcp-project-yapay",
       "technologies": [
-        "springboot",
-        "postgresql",
-        "vuejs",
-        "nuxtjs",
-        "flask",
-        "nativescript"
+        "Springboot",
+        "PostgreSQL",
+        "Vue.js",
+        "Nuxt.js",
+        "Flask",
+        "NativeScript"
       ],
       "collaboratorsGithub": [
         "alessiayi",
@@ -58,7 +58,7 @@
       "imageFilename": "barranco-weather",
       "year": "2018",
       "link": "https://gitlab.com/barranco-weather",
-      "technologies": ["flask", "php", "raspberrypi"],
+      "technologies": ["Flask", "PHP", "Raspberry Pi"],
       "collaboratorsGithub": ["arturocuya", "lilvedaes"]
     },
     {
@@ -66,7 +66,7 @@
       "imageFilename": "the-cuac-path",
       "year": "2017",
       "link": "https://github.com/andrea-velasquez/TheCuacPath/",
-      "technologies": ["gamemaker"],
+      "technologies": ["Game Maker"],
       "collaboratorsGithub": ["arturocuya", "lilvedaes"]
     },
     {
@@ -74,7 +74,7 @@
       "imageFilename": "esnaque",
       "year": "2017",
       "link": "https://github.com/andrea-velasquez/esnaque/",
-      "technologies": ["python"],
+      "technologies": ["Python"],
       "collaboratorsGithub": ["lilvedaes"]
     }
   ],
@@ -134,7 +134,8 @@
         },
         {
           "name": "React",
-          "level": "intermediate-advance"
+          "level": "intermediate-advance",
+          "tooltip": "De hecho, no es un framework"
         },
         {
           "name": "Flask",

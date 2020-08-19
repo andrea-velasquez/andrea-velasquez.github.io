@@ -46,6 +46,52 @@
   width: $size;
 }
 
+
+@mixin top-tooltip($color, $text-color, $font: inherit, $margin-top: -10px) {
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    z-index: 1;
+
+    // Top center
+    top: 0;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+
+    // For the animation
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility .5s 0s;
+  }
+
+  &:hover{
+    &:before, &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:before {
+    display: inline-block; // take content size
+    content: attr(data-text); // attribute data-text is set in html
+    text-align:center;
+    padding:5px;
+    margin-top: $margin-top;
+    background-color: $color;
+    color: $text-color;
+    font-family: $font;
+    border-radius: 5px;
+  }
+
+  &:after {
+    content: " ";
+    border-width: -($margin-top / 2);
+    border-style: solid;
+    border-color: $color transparent transparent transparent;
+  }
+}
+
 /* Breakpoints */
 @mixin from($size) {
   @media only screen and (min-width: map-get($screen-bp-min, $size)){

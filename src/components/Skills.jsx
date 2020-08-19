@@ -42,7 +42,12 @@ class Skills extends Component {
               <div className="field_text">
                 {skillCategory.data.map((skill, skIdx) => (
                   <div key={skIdx} className="field field__language">
-                    <span>{skill.name}</span>
+                    <span
+                      className={skill.tooltip? "tooltip": ""}
+                      data-text={skill.tooltip}
+                    >
+                      {skill.name}
+                    </span>
                     <div className="field__text">
                       <ProgressBar level={skill.level} />
                       <ReactSVG

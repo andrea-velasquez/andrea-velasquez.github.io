@@ -56,6 +56,14 @@ p.field__text, p.polaroid-film__caption {
   margin-bottom: $field-text-inter-spacing;
 }
 
+.tooltip {
+  @include top-tooltip (
+    rgba(#000, .5), // color
+    #fff, // text-color
+    Roboto // text-font
+  );
+}
+
 hr {
   border-top: none;
   border-bottom: dotted $color-divider;

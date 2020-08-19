@@ -21,12 +21,13 @@ class Project extends Component {
           <div className="project__technologies">
             <span>{constants.MADE_WITH}:</span>
             {project.technologies.map((tech, idx) => (
-              <ReactSVG
-                key={idx}
-                src={techLogos[tech]}
-                className="logo"
-                wrapper="span"
-              />
+              <span key={idx} className="tooltip" data-text={tech}>
+                <ReactSVG
+                  src={techLogos[tech]}
+                  className="logo"
+                  wrapper="span"
+                />
+              </span>
             ))}
           </div>
           {project.collaboratorsGithub && (
