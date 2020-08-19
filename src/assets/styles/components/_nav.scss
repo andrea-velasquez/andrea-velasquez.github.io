@@ -123,7 +123,7 @@
     @include up-to('lg') {
       // wrap text, width needed or else it expands
       white-space: normal;
-      width: 5em;
+      width: 5.5em;
 
       // Height must be bigger than the content
       // to avoid hidding the overflow.
