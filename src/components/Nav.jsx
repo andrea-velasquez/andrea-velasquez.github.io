@@ -47,6 +47,11 @@ class Nav extends Component {
     this.setState({ menuCollapsed });
   };
 
+  scrollTo = (id) => {
+    // using a polyfill for smooth scroll
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+
   componentDidMount() {
     this.prev = window.scrollY;
     window.addEventListener("scroll", this.handleScroll);
@@ -67,7 +72,7 @@ class Nav extends Component {
       onChangeLang,
       onChangeTheme,
     } = this.props;
-
+    //onClick={}
     return (
       <nav id="nav">
         <div className="nav__collapse-button" onClick={this.toggleMenu}>
@@ -80,7 +85,10 @@ class Nav extends Component {
             }`}
           >
             {Object.keys(constants.sections).map((section, idx) => (
-              <a key={idx} href={`#${capitalize(section)}`}>
+              <a key={idx}
+              href={`#${capitalize(section)}`}
+              onClick={() => this.scrollTo(capitalize(section))}
+              >
                 {constants.sections[section]}
               </a>
             ))}
