@@ -135,7 +135,7 @@
         {
           "name": "React",
           "level": "intermediate-advance",
-          "tooltip": "De hecho, no es un framework"
+          "tooltip": "De hecho no es un framework"
         },
         {
           "name": "Flask",
