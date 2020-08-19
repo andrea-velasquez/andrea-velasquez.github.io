@@ -15,7 +15,7 @@ class Header extends Component {
       },
       {
         site: "LinkedIn",
-        username: "andrea-velasquez-gushiken-06235314a",
+        username: "Andrea Velasquez Gushiken",
         link: "https://linkedin.com/in/andrea-velasquez-gushiken-06235314a",
         logo: LinkedinLogo,
       },

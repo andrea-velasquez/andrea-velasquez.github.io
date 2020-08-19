@@ -1,14 +1,27 @@
 #Header {
+  @include up-to('md') {
+    font-size: 12px;
+  }
+
   .field__subject, .field__occupation {
-    width: 50%;
-    @include from('lg') {
-      width: 70%;
+    width: 70%;
+  }
+
+  .field__subject {
+    @include up-to('xs') {
+      width: 60%;
+    }
+  }
+  .field__occupation {
+    @include up-to-custom-screen(470px) {
+      width: 100%;
     }
   }
 
   .field__account {
-   display: inline-block;
-   @include two-column-content(7.5rem);
+   display: inline-flex;
+   align-items: baseline;
+   @include two-column-content(7.5em);
   }
 
  .field .field__name .logo svg{

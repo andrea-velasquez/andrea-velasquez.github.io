@@ -19,11 +19,17 @@
   .field {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    @include up-to-custom-screen(370px) {
+      flex-direction: column;
+    }
   }
 
   .field__text {
-    margin-left: 1em;
+    @include from-custom-screen(370px) {
+      margin-left: 1em;
+    }
+    
     display: inline-block;
     white-space: nowrap;
 
@@ -46,9 +52,11 @@
 
 #Skills .field__others {
   width: 100%;
-  display: inline-flex;
 
-  .field__text {
-    margin-left: 1em;
+  @include from('sm') {
+    display: inline-flex;
+      .field__text {
+      margin-left: 1em;
+    }
   }
 }

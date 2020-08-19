@@ -3,19 +3,39 @@
   top: 0;
   right: 0;
 
-  svg {
+  @include up-to('xs') {
+    font-size: calc(12px + .4vw);
+  }
+
+  svg { // Clip
     position: absolute;
     right: 0;
     @include resize-aspect-ratio(7rem);
     transform: translateX(28%) translateY(-25%);
     z-index: 1;
+
+    @include up-to('xs') {
+      display: none;
+    }
   }
 
   .polaroid-film {
     position: absolute;
     right: 0;
     top: 0;
-    margin: 1rem 2rem 0 0;
     transform: rotate(8deg);
+
+    @include from('sm') {
+      margin: 1rem 2rem 0 0;
+    }
+
+    img {
+      width: 15vw;
+      min-width: 8.5em;
+
+      @include from('sm') {
+        margin-bottom: 2em;
+      }
+    }
   }
 }

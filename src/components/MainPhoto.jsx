@@ -8,7 +8,7 @@ class MainPhoto extends Component {
     return (
       <div id="MainPhoto">
         <Clip/>
-        <PolaroidFilm src={Photo} width={"200rem"} caption=" "/>
+        <PolaroidFilm src={Photo}/>
       </div>
     );
   }

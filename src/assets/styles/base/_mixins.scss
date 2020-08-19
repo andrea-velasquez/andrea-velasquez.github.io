@@ -2,7 +2,7 @@
   height: $height;
   width: auto;
 }
-@mixin two-column-content($leftWidth, $rightWidth: calc(100%-#{$leftWidth})) {
+@mixin two-column-content($leftWidth, $rightWidth: calc(100% - #{$leftWidth})) {
   width:100%;
   &>:nth-child(2n-1) {
     width: $leftWidth;
@@ -70,6 +70,12 @@
 
 @mixin from-custom-screen($bp) {
   @media (min-width: $bp){
+    @content
+  }
+}
+
+@mixin up-to-custom-screen($bp) {
+  @media (max-width: $bp){
     @content
   }
 }

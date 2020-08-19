@@ -11,6 +11,10 @@
     path { fill: $color-logos-main; }
 
     margin: -4rem 0rem -2rem 2rem;
+
+    @include up-to('sm') {
+      margin-left: 0;
+    }
     @include from('xl') { margin-top: -6rem; }
   }
 }

@@ -15,6 +15,16 @@ body{
   font-family: "veraType";
   @include theme-aware('background-color', 'color-paper', $themes);
   padding: 3em;
+
+  @include up-to('sm') {
+    margin-top: 10%;
+  }
+
+  @include up-to('xs') {
+    margin-right: 5%;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
 }
 
 .field .field__name,
@@ -53,13 +63,16 @@ hr {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5em;
+  @include up-to('xs') {
+    font-size: 2em;
+  }
 }
 h2 {
-  font-size: 1.75rem;
+  font-size: 1.75em;
 }
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }
 h4 {
   font-size: 1.25rem;

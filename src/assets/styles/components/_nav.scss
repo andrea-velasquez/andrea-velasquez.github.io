@@ -68,13 +68,17 @@
   z-index: -1; // behind nav menu but in front
                // of everything else (#nav { z-index: 2 })
   
+  @include up-to('md') {
+    font-size: calc(8px + 1vw);
+  }
+
   @include up-to('lg') {
     position: fixed;
     top: 0;
     @include absolute-center;
   }
 
-  &.collapsed span {
+  &.hide-text span {
     height: 0;
   }
 
@@ -95,7 +99,7 @@
 
 .nav__option {
   display: inline-block;
-  margin: 1rem;
+  margin: 1em;
   cursor: pointer;
 
   // XL screens styles
@@ -119,7 +123,7 @@
     @include up-to('lg') {
       // wrap text, width needed or else it expands
       white-space: normal;
-      width: 6rem;
+      width: 5em;
 
       // Height must be bigger than the content
       // to avoid hidding the overflow.
