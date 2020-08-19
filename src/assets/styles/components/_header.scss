@@ -22,13 +22,21 @@
    display: inline-flex;
    align-items: baseline;
    @include two-column-content(7.5em);
+
+   .field__text {
+     word-wrap: break-word;
+   }
   }
 
- .field .field__name .logo svg{
-    @include resize-aspect-ratio(1rem);
-    margin-right: 0.5em;
-    path {
-      @include theme-aware('fill', 'color-logos-main', $themes);
+ .field .field__name .logo {
+    display: inline-block;
+    vertical-align: middle;
+    svg {
+      @include resize-aspect-ratio(1rem);
+      margin-right: 0.5em;
+      path {
+        @include theme-aware('fill', 'color-logos-main', $themes);
+      }
     }
   }
 }
