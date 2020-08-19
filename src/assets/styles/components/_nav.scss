@@ -65,6 +65,8 @@
 
 .nav__options {
   text-align: center;
+  z-index: -1; // behind nav menu but in front
+               // of everything else (#nav { z-index: 2 })
   
   @include up-to('lg') {
     position: fixed;
@@ -74,6 +76,20 @@
 
   &.collapsed span {
     height: 0;
+  }
+
+  // From: https://fvsch.com/articles/transition-fade/test5.html
+  @include up-to('sm') {
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity .3s linear;
+    }
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s .3s, opacity .3s linear;
+    }
   }
 }
 

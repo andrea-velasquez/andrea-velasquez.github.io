@@ -38,6 +38,9 @@ class Nav extends Component {
     )
       this.setState({ optionsCollapsed });
 
+    if (!this.state.menuCollapsed)
+      this.setState({ menuCollapsed: true });
+
     this.prev = window.scrollY;
   };
 
@@ -86,9 +89,10 @@ class Nav extends Component {
           </div>
         }
         <div
-          className={`nav__options ${
-            this.state.optionsCollapsed ? "collapsed" : ""
-          }`}
+          className={`nav__options
+            ${ this.state.optionsCollapsed ? "hide-text" : "" }
+            ${ this.state.menuCollapsed ? "visible" : "hidden" }`
+          }
         >
           <div className="nav__option language">
             <button onClick={onChangeLang}>{capitalize(otherLang)}</button>
