@@ -21,8 +21,8 @@ class Header extends Component {
       },
       {
         site: "Email",
-        username: "andreavel@outlook.com",
-        link: "mailto:andreavel@outlook.com",
+        username: "andreavelasquez3107+w@gmail.com",
+        link: "mailto:andreavelasquez3107+w@gmail.com",
         logo: EmailLogo,
       },
     ],
