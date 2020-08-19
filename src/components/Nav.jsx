@@ -71,6 +71,7 @@ class Nav extends Component {
       theme,
       onChangeLang,
       onChangeTheme,
+      resume
     } = this.props;
     //onClick={}
     return (
@@ -112,10 +113,12 @@ class Nav extends Component {
           </div>
           {xlScreenWidth > window.innerWidth || <br />}
           <div className="nav__option pdf">
-            <button>
-              <PdfIcon />
-            </button>
-            <span>{constants.PDF_HERE}</span>
+            <a href={resume} download>
+              <button>
+                <PdfIcon />
+              </button>
+              <span>{constants.RESUME}</span>
+            </a>
           </div>
         </div>
       </nav>

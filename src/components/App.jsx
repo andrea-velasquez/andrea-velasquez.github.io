@@ -12,6 +12,8 @@ import Background from "./Background";
 import MainPhoto from "./MainPhoto";
 
 import { ReactComponent as Logo } from "../assets/images/logo.svg";
+import ResumeEn from "../assets/resumes/resume-en.pdf";
+import ResumeEs from "../assets/resumes/resume-es.pdf";
 
 // Language
 import contentEn from "../content/en/content.json";
@@ -67,6 +69,7 @@ class App extends Component {
             onChangeTheme={this.onChangeTheme}
             otherLang={this.getOtherLang()}
             theme={theme}
+            resume={curLanguage==="es"? ResumeEs : ResumeEn}
           />
           <div className="paper">
             <MainPhoto />
