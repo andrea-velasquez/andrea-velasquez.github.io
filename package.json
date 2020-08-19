@@ -15,12 +15,12 @@
     "sass": "^1.26.8",
     "typescript": "^3.9.5"
   },
+  "homepage": "https://andrea-velasquez.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
