@@ -73,7 +73,7 @@ class Nav extends Component {
       onChangeTheme,
       resume
     } = this.props;
-    //onClick={}
+    
     return (
       <nav id="nav">
         <div className="nav__collapse-button" onClick={this.toggleMenu}>

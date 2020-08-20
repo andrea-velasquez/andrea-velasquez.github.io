@@ -108,6 +108,11 @@
     color: #fff;
   }
 
+  a {
+    text-decoration: none;
+    outline: none;
+  }
+
   button {
     display: block;
     @include squared-size(3rem);
