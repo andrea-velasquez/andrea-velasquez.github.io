@@ -29,7 +29,7 @@
       "name": "Página Personal",
       "imageFilename": "personal-website",
       "year": "2020",
-      "link": "#",
+      "link": "https://github.com/andrea-velasquez/andrea-velasquez.github.io",
       "technologies": ["React", "Sass"]
     },
     {
