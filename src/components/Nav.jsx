@@ -16,6 +16,7 @@ class Nav extends Component {
   state = {
     menuCollapsed: false,
     optionsCollapsed: false,
+    scrolling: false
   };
 
   handleWindowResize = () => {
@@ -26,20 +27,13 @@ class Nav extends Component {
       this.setState({ menuCollapsed: false });
   };
 
-  handleScroll = (e) => {
-    let optionsCollapsed = this.state;
-    var currentPos = window.pageYOffset;
+  handleScroll = () => {
+    if (this.timer)
+      clearTimeout(this.timer);
 
-    optionsCollapsed = this.prev < currentPos && currentPos!==0; // scrolling down
-
-    if (xlScreenWidth > window.innerWidth){
-      if (this.state.optionsCollapsed !== optionsCollapsed)
-        this.setState({ optionsCollapsed });
-      if (!this.state.menuCollapsed)
-        this.setState({ menuCollapsed: true });
-    }
-
-    this.prev = window.scrollY;
+    this.timer = setTimeout(() => this.setState({ scrolling: false }), 150);
+    if (!this.state.scrolling)
+      this.setState({ scrolling: true });
   };
 
   toggleMenu = () => {
@@ -52,8 +46,14 @@ class Nav extends Component {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
   }
 
+  hideOptions = () => {
+    return xlScreenWidth < window.innerWidth
+           ? false
+           : (!this.state.menuCollapsed || this.state.scrolling);
+  }
+
   componentDidMount() {
-    this.prev = window.scrollY;
+    this.timer = null;
     window.addEventListener("scroll", this.handleScroll);
     window.addEventListener("resize", this.handleWindowResize);
     this.handleWindowResize();
@@ -97,8 +97,7 @@ class Nav extends Component {
         }
         <div
           className={`nav__options
-            ${ this.state.optionsCollapsed ? "hide-text" : "" }
-            ${ this.state.menuCollapsed ? "visible" : "hidden" }`
+            ${ this.hideOptions()  ? "hidden" : "" }`
           }
         >
           <div className="nav__option language">

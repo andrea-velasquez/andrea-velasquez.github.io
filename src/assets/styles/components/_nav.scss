@@ -78,17 +78,12 @@
     @include absolute-center;
   }
 
-  &.hide-text span {
-    height: 0;
-  }
-
   // From: https://fvsch.com/articles/transition-fade/test5.html
   @include up-to('sm') {
-    &.visible {
-      visibility: visible;
-      opacity: 1;
-      transition: opacity .3s linear;
-    }
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s linear;
+
     &.hidden {
       visibility: hidden;
       opacity: 0;
@@ -111,27 +106,6 @@
 
   @include from('lg') {
     color: #fff;
-  }
-
-  span {
-    display: inline-block;
-
-    vertical-align: top; // make animation go from bottom
-                         // to top, instead of to the center
-    transition: height .5s, color .2s;
-
-    @include up-to('lg') {
-      // wrap text, width needed or else it expands
-      white-space: normal;
-      width: 5.5em;
-
-      // Height must be bigger than the content
-      // to avoid hidding the overflow.
-      // The overflow is needed to hide content
-      // when the animation makes height=0
-      height: 3em;
-      overflow: hidden;
-    }
   }
 
   button {
