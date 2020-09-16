@@ -109,7 +109,7 @@
         },
         {
           "name": "Java",
-          "level": "basic"
+          "level": "intermediate"
         },
         {
           "name": "Wolfram",
@@ -163,6 +163,10 @@
           "level": "intermediate-advance"
         },
         {
+          "name": "DynamoDB",
+          "level": "basic"
+        },
+        {
           "name": "MongoDB",
           "level": "basic"
         }
@@ -184,6 +188,25 @@
 
   "experience": {
     "experiences": [
+      [
+        {
+          "name": "Work",
+          "text": "Tranzfer.me",
+          "link": "http://tranzfer.me/"
+        },
+        {
+          "name": "Job Title",
+          "text": "Software Engineer Intern"
+        },
+        {
+          "name": "Location",
+          "text": "Lima, Perú"
+        },
+        {
+          "name": "Period",
+          "text": "Jul 2020 - Present"
+        }
+      ],
       [
         {
           "name": "Work",

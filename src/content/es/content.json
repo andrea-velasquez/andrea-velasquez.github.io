@@ -109,7 +109,7 @@
         },
         {
           "name": "Java",
-          "level": "basic"
+          "level": "intermediate"
         },
         {
           "name": "Wolfram",
@@ -163,6 +163,10 @@
           "level": "intermediate-advance"
         },
         {
+          "name": "DynamoDB",
+          "level": "basic"
+        },
+        {
           "name": "MongoDB",
           "level": "basic"
         }
@@ -184,6 +188,25 @@
 
   "experience": {
     "experiences": [
+      [
+        {
+          "name": "Trabajo",
+          "text": "Tranzfer.me",
+          "link": "http://tranzfer.me/"
+        },
+        {
+          "name": "Puesto",
+          "text": "Practicante de Ingeniería de Software"
+        },
+        {
+          "name": "Ubicación",
+          "text": "Lima, Perú"
+        },
+        {
+          "name": "Periodo",
+          "text": "Jul 2020 - Actualidad"
+        }
+      ],
       [
         {
           "name": "Trabajo",
