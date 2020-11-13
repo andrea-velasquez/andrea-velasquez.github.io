@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "45a8a12581eda4167766835b79d10efc",
+    "revision": "ddb6112ff484d3a19c211e76990fdc1a",
     "url": "/index.html"
   },
   {
-    "revision": "8c0de11f3fadc4d6886a",
-    "url": "/static/css/main.3a7534b8.chunk.css"
+    "revision": "3a7c9f7b10b40b5f9f96",
+    "url": "/static/css/main.60cac696.chunk.css"
   },
   {
-    "revision": "6d26636dc03741c9ef12",
-    "url": "/static/js/2.25bce3a3.chunk.js"
+    "revision": "d3b5996726ea2db0fb2e",
+    "url": "/static/js/2.b5385a4e.chunk.js"
   },
   {
-    "revision": "2c598234c7a24970b5fdf032f602e7bc",
-    "url": "/static/js/2.25bce3a3.chunk.js.LICENSE.txt"
+    "revision": "72c2168a992bae65033dc2d74bcc3eb6",
+    "url": "/static/js/2.b5385a4e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8c0de11f3fadc4d6886a",
-    "url": "/static/js/main.4913d006.chunk.js"
+    "revision": "3a7c9f7b10b40b5f9f96",
+    "url": "/static/js/main.fa00669d.chunk.js"
   },
   {
-    "revision": "4ac598fa20d7619937c8",
-    "url": "/static/js/runtime-main.90834230.js"
+    "revision": "f139b624154a37532bb8",
+    "url": "/static/js/runtime-main.ce89729d.js"
   },
   {
     "revision": "68fa8cbf6357ae208f51015413e24aeb",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "59964c8b8e9fc7cff10fc48dd021c227",
     "url": "/static/media/django.59964c8b.svg"
+  },
+  {
+    "revision": "518e533f8125df75517aba43d20246c0",
+    "url": "/static/media/dynamodb.518e533f.svg"
   },
   {
     "revision": "4d9d252943cf5443f9c2dbb5288a04d9",
@@ -172,12 +176,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/react.5615bdff.svg"
   },
   {
-    "revision": "6699b5dbaa4c590a77d2a7684d6cff48",
-    "url": "/static/media/resume-en.6699b5db.pdf"
+    "revision": "fed9afb4a2101df2e09d55a4755fdeeb",
+    "url": "/static/media/resume-en.fed9afb4.pdf"
   },
   {
-    "revision": "fdf98a5bc458bd49f035e220f813ef43",
-    "url": "/static/media/resume-es.fdf98a5b.pdf"
+    "revision": "0fd6bf5f92144705a0529a45bfa3c940",
+    "url": "/static/media/resume-es.0fd6bf5f.pdf"
   },
   {
     "revision": "f6f7eaa7bdcebe9ae7d4675f320fe029",
@@ -218,6 +222,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1243c82b6e9ac7e7dca72cbc3049c2d3",
     "url": "/static/media/vuejs.1243c82b.svg"
+  },
+  {
+    "revision": "2850c3c7b862c46c9c6aa6f14936528f",
+    "url": "/static/media/wikisearch.2850c3c7.png"
   },
   {
     "revision": "1faa6f679abf6e56b7d68d1fff9f8ecd",
