@@ -33,6 +33,13 @@
       "technologies": ["React", "Sass"]
     },
     {
+      "name": "WikiSearch",
+      "imageFilename": "wikisearch", 
+      "year": "2020",
+      "link": "https://github.com/andrea-velasquez/wikisearch",
+      "technologies": ["C++", "React"]
+    },
+    {
       "name": "Yapay",
       "imageFilename": "yapay",
       "year": "2019",
