@@ -37,7 +37,10 @@
       "imageFilename": "wikisearch", 
       "year": "2020",
       "link": "https://github.com/andrea-velasquez/wikisearch",
-      "technologies": ["C++", "React"]
+      "technologies": ["C++", "React"],
+      "collaboratorsGithub": [
+        "DanielUtec123", "fsocualaya", "juan4056"
+      ]
     },
     {
       "name": "Yapay",
