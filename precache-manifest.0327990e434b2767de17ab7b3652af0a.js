@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ddb6112ff484d3a19c211e76990fdc1a",
+    "revision": "032f70afa1873886b9f4a90a676b68e6",
     "url": "/index.html"
   },
   {
-    "revision": "3a7c9f7b10b40b5f9f96",
+    "revision": "f799045103aae7b5396c",
     "url": "/static/css/main.60cac696.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.b5385a4e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a7c9f7b10b40b5f9f96",
-    "url": "/static/js/main.fa00669d.chunk.js"
+    "revision": "f799045103aae7b5396c",
+    "url": "/static/js/main.b1de78c7.chunk.js"
   },
   {
     "revision": "f139b624154a37532bb8",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/angular.68fa8cbf.svg"
   },
   {
-    "revision": "22d816e7a325ab4dbf0810605ab9f17f",
-    "url": "/static/media/barranco-weather.22d816e7.png"
+    "revision": "231e99d3e743fc98dd05c43142f9d772",
+    "url": "/static/media/barranco-weather.231e99d3.png"
   },
   {
     "revision": "ec79d1210f9ea471c7bdd9578daec10d",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/email.4d9d2529.svg"
   },
   {
-    "revision": "a76b83815b82d794c9a88bb9fa858cd9",
-    "url": "/static/media/esnaque.a76b8381.png"
+    "revision": "69603df09a5526d56f26933296871bec",
+    "url": "/static/media/esnaque.69603df0.png"
   },
   {
     "revision": "2e551eccebe0f53f455e61266fcb61d5",
@@ -116,8 +116,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.8ceb46c1.svg"
   },
   {
-    "revision": "f06d6bbd2e5e7a48acffbdb8f8353989",
-    "url": "/static/media/me.f06d6bbd.jpg"
+    "revision": "49aed5b5212061e63ca6436fe5e55ec8",
+    "url": "/static/media/me.49aed5b5.jpg"
   },
   {
     "revision": "cad4d011429b351db9451f042a11c9c6",
@@ -148,8 +148,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/pen.d919fb7d.svg"
   },
   {
-    "revision": "2be24525d370e9482328732dc27ef435",
-    "url": "/static/media/personal-website.2be24525.png"
+    "revision": "f74d0e52ca30b2b650f97b097e948f40",
+    "url": "/static/media/personal-website.f74d0e52.png"
   },
   {
     "revision": "5b4a2f360627a417cf4e300e8ade20ce",
@@ -176,12 +176,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/react.5615bdff.svg"
   },
   {
-    "revision": "fed9afb4a2101df2e09d55a4755fdeeb",
-    "url": "/static/media/resume-en.fed9afb4.pdf"
+    "revision": "8279d176f820c078636456a17501b76a",
+    "url": "/static/media/resume-en.8279d176.pdf"
   },
   {
-    "revision": "0fd6bf5f92144705a0529a45bfa3c940",
-    "url": "/static/media/resume-es.0fd6bf5f.pdf"
+    "revision": "6307eb7b0fb446c73d5a4c27e2111fa6",
+    "url": "/static/media/resume-es.6307eb7b.pdf"
   },
   {
     "revision": "f6f7eaa7bdcebe9ae7d4675f320fe029",
@@ -208,12 +208,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/tape.6c41610a.svg"
   },
   {
-    "revision": "27020899cf9d5ef053d5e03b9b1a77f4",
-    "url": "/static/media/the-cuac-path.27020899.png"
+    "revision": "5b46cdc219a16f9b72d5d3c81a9ae563",
+    "url": "/static/media/the-cuac-path.5b46cdc2.png"
   },
   {
-    "revision": "471a9d2997146b30e4a78e1efb0e0f22",
-    "url": "/static/media/utec.471a9d29.jpg"
+    "revision": "705801adfe9791ec63b79a8e0ff261eb",
+    "url": "/static/media/utec.705801ad.jpg"
   },
   {
     "revision": "80d0d3bfd0bf4ce7a04694167b6ad67f",
@@ -224,15 +224,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/vuejs.1243c82b.svg"
   },
   {
-    "revision": "2850c3c7b862c46c9c6aa6f14936528f",
-    "url": "/static/media/wikisearch.2850c3c7.png"
+    "revision": "a91d40afd0e65920cea13540ef76e7b0",
+    "url": "/static/media/wikisearch.a91d40af.png"
   },
   {
     "revision": "1faa6f679abf6e56b7d68d1fff9f8ecd",
     "url": "/static/media/wolfram.1faa6f67.svg"
   },
   {
-    "revision": "5c0054d6540b3fd0583a490acbc1e7d3",
-    "url": "/static/media/yapay.5c0054d6.png"
+    "revision": "c679312b516c8e7b31a639e0918c5605",
+    "url": "/static/media/yapay.c679312b.png"
   }
 ]);
