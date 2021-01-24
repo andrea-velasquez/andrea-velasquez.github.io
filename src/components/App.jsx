@@ -36,7 +36,7 @@ const langContent = {
 class App extends Component {
   state = {
     languages: ["es", "en"],
-    curLanguage: "es",
+    curLanguage: "en",
     theme: "light",
   };
 
