@@ -29,14 +29,14 @@
       "name": "Página Personal",
       "imageFilename": "personal-website",
       "year": "2020",
-      "link": "https://github.com/andrea-velasquez/andrea-velasquez.github.io",
+      "link": "https://github.com/a4vg/a4vg.github.io",
       "technologies": ["React", "Sass"]
     },
     {
       "name": "WikiSearch",
       "imageFilename": "wikisearch", 
       "year": "2020",
-      "link": "https://github.com/andrea-velasquez/wikisearch",
+      "link": "https://github.com/a4vg/wikisearch",
       "technologies": ["C++", "React"],
       "collaboratorsGithub": [
         "DanielUtec123", "fsocualaya", "juan4056"
@@ -75,7 +75,7 @@
       "name": "The CUAC Path",
       "imageFilename": "the-cuac-path",
       "year": "2017",
-      "link": "https://github.com/andrea-velasquez/TheCuacPath/",
+      "link": "https://github.com/a4vg/TheCuacPath/",
       "technologies": ["Game Maker"],
       "collaboratorsGithub": ["arturocuya", "lilvedaes"]
     },
@@ -83,7 +83,7 @@
       "name": "Esnaque",
       "imageFilename": "esnaque",
       "year": "2017",
-      "link": "https://github.com/andrea-velasquez/esnaque/",
+      "link": "https://github.com/a4vg/esnaque/",
       "technologies": ["Python"],
       "collaboratorsGithub": ["lilvedaes"]
     }

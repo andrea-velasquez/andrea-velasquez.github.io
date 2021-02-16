@@ -9,8 +9,8 @@ class Header extends Component {
     accounts: [
       {
         site: "Github",
-        username: "@andrea-velasquez",
-        link: "https://github.com/andrea-velasquez/",
+        username: "@a4vg",
+        link: "https://github.com/a4vg/",
         logo: GithubLogo,
       },
       {
