@@ -18,7 +18,7 @@
         },
         {
           "name": "Año",
-          "text": "4to"
+          "text": "5to"
         }
       ]
     ]
@@ -140,16 +140,16 @@
       "data": [
         {
           "name": "Angular",
-          "level": "intermediate-advance"
+          "level": "basic"
         },
         {
           "name": "React",
-          "level": "intermediate-advance",
+          "level": "intermediate",
           "tooltip": "De hecho no es un framework"
         },
         {
           "name": "Flask",
-          "level": "advance"
+          "level": "basic"
         },
         {
           "name": "Django",
@@ -161,7 +161,7 @@
         },
         {
           "name": "Vue.js",
-          "level": "basic"
+          "level": "intermediate-advance"
         }
       ]
     },
@@ -174,7 +174,7 @@
         },
         {
           "name": "DynamoDB",
-          "level": "basic"
+          "level": "intermediate"
         },
         {
           "name": "MongoDB",
